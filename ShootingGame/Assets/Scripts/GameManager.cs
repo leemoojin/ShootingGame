@@ -6,10 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameObject smallPlane;
-    public GameObject middlePlane;
-    public GameObject largePlane;
+    public Enemy smallPlane;
+    public Enemy middlePlane;
+    public Enemy largePlane;
     public Enemy bombPlane;
+    public Enemy stone;
+    public Enemy meteor;
 
     public GameObject Player;
 
@@ -43,13 +45,25 @@ public class GameManager : MonoBehaviour
 
     private void MakePlane()
     {
-        Instantiate(smallPlane);
-
-        if(time > 5f)
+        if(time < 5)
         {
-            Enemy bomb = Instantiate(bombPlane);
-            bomb.Player = Player;
+            Instantiate(smallPlane);
         }
-
+        else if(time>5 && time<10)
+        {
+            Instantiate(middlePlane);
+        }
+        else if(time>10 && time < 15)
+        {
+            Instantiate(largePlane);
+        }
+        else if(time>15 && time < 20)
+        {
+            Instantiate(stone);
+        }
+        else if(time>20 && time < 30)
+        {
+            Instantiate(meteor);
+        }
     }
 }

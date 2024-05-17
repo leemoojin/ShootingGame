@@ -23,23 +23,37 @@ public class Enemy : MonoBehaviour
 
         switch(type)
         {
+            //소형 비행기
             case 0:
                 hp = 1;
                 speed = 0.003f;
                 break;
+            //중형 비행기
             case 1:
                 hp = 2;
                 speed = 0.005f;
                 break;
+            //대형 비행기
             case 2:
                 hp = 5;
-                speed = 0.001f;
+                speed = 0.002f;
                 break;
+            //자폭기
             case 3:
-                Player = GameManager.Instance.Player;
                 hp = 1;
                 speed = 0.005f;
                 break;
+            //운석
+            case 4:
+                hp = 10;
+                speed = 0.001f;
+                break;
+            //메테오
+            case 5:
+                hp = 100;
+                speed = 0.008f;
+                break;
+
         }
     }
 
@@ -47,11 +61,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.down * speed;
-
-        if (type == 3)
-        {
-            PlayerMove();
-        }
 
         if(transform.position.y < -6f)
         {

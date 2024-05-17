@@ -9,6 +9,9 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
+        Enemy enemy = new Enemy();
+        type = enemy.type;
+
         switch(type)
         {
             case 0:
@@ -16,6 +19,10 @@ public class Bullet : MonoBehaviour
                 break;
             case 1:
                 shootspeed = 0.007f;
+                break;
+            case 2:
+                shootspeed = 0.003f;
+                transform.localScale = new Vector2(1.5f, 1.5f);
                 break;
         }
     }

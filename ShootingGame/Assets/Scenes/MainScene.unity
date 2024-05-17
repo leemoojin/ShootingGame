@@ -244,10 +244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb72e408084269488712a15b7e03cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallPlane: {fileID: 2330697820128048589, guid: 6c0ba8802e1693f40a2d246f4ac3ac49, type: 3}
-  middlePlane: {fileID: 3443576950919441260, guid: 526b8b35490195b43a68b54c5b77093c, type: 3}
-  largePlane: {fileID: 4273692531225187510, guid: 72a0ad7a2651292489386dd0c9063c28, type: 3}
+  smallPlane: {fileID: 2157141320342148855, guid: 6c0ba8802e1693f40a2d246f4ac3ac49, type: 3}
+  middlePlane: {fileID: 1764579051548298980, guid: 526b8b35490195b43a68b54c5b77093c, type: 3}
+  largePlane: {fileID: 2907161115271324024, guid: 72a0ad7a2651292489386dd0c9063c28, type: 3}
   bombPlane: {fileID: 6321971656900587401, guid: d61e6ec5b4eb4ba4fb22c19bb612bb3d, type: 3}
+  stone: {fileID: 0}
+  meteor: {fileID: 0}
   Player: {fileID: 0}
 --- !u!4 &1227829011
 Transform:
