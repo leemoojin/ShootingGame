@@ -2,7 +2,8 @@
 using Unity.VisualScripting;
 
 public class Records
-{   
+{
+    //레코즈의 리스트안의 기록들은 PlayerPrefs사용해서 저장할 계획
     public List<Record> singleRecords = new List<Record>();
     public List<Record> multiRecords = new List<Record>();
 

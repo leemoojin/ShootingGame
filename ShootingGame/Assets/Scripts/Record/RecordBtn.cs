@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RecordBtn : MonoBehaviour
 {
     public void MultiBtn()
     {
-        Debug.Log(" 멀티 버튼 클릭");
-
+        Debug.Log("RecordBtn.cs - MultiBtn() - 멀티 버튼 클릭");
+        
+        RecordManager.IsMulti = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void SingleBtn()
     {
-        Debug.Log("싱클 클릭");
-
+        RecordManager.IsMulti = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void BackBtn()
     {
         Debug.Log("백 클릭");
-
+        SceneManager.LoadScene("MenuScene");
     }
 }

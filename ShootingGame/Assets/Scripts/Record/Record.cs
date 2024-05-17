@@ -1,9 +1,19 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class Record
+public class Record : MonoBehaviour
 {
-    
+
+    [SerializeField] private GameObject _Image1P;
+    [SerializeField] private GameObject _point1P;
+    [SerializeField] private GameObject _playTime1P;
+
+    [SerializeField] private GameObject _Image2P;
+    [SerializeField] private GameObject _point2P;
+    [SerializeField] private GameObject _playTime2P;
+
+
     public int Score1P { get; set; }
     public string PlayTime1P { get; set; }
     public int Score2P { get; set; }
