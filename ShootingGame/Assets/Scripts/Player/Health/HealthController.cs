@@ -8,6 +8,12 @@ public class HealthController : MonoBehaviour
     private int currentHealth;
     [SerializeField]
     private int maximumHealth;
+    EnhaceAttackController attackController;
+
+    private void Awake()
+    {
+        attackController = GetComponent<EnhaceAttackController>();
+    }
 
 
     public void TakeDamgage(int damageAmount)
@@ -18,6 +24,7 @@ public class HealthController : MonoBehaviour
         }
 
         currentHealth -= damageAmount;
+        attackController.reduceBulletLine(damageAmount);
 
         if(currentHealth < 0)
         {

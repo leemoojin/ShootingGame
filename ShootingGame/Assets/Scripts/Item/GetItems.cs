@@ -28,6 +28,7 @@ public class GetItems : MonoBehaviour
             {
                 case ItemData.ItemType.Bomb:
                 player1Stat.BombCount++;
+                    
                     Debug.Log("ÆøÅº °³¼ö Áõ°¡, ÇöÀç ÆøÅº °³¼ö :" + player1Stat.BombCount);
                     break;
                 
