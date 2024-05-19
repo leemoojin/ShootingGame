@@ -10,16 +10,14 @@ public class Enemy : MonoBehaviour
     public int hp;
     public float speed;
 
-    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("Shoot", 0f, 1f);
 
         float x = Random.Range(-2.2f, 2.2f);
-        float y = 5f;
 
-        transform.position = new Vector2(x, y);
+        transform.position = new Vector2(x, 5f);
 
         switch(type)
         {
@@ -71,10 +69,5 @@ public class Enemy : MonoBehaviour
     private void Shoot()
     {
         Instantiate(Bullet, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-    }
-
-    public void PlayerMove( )
-    {
-        transform.position = Player.transform.position - transform.position;
     }
 }
