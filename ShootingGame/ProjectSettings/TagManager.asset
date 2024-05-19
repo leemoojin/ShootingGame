@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Board
+  - SingleScoreBar
+  - MultiScoreBar
+  - Point1P
+  - Point2P
+  - PlayTime1P
+  - PlayTime2P
+  - Image1P
   layers:
   - Default
   - TransparentFX
