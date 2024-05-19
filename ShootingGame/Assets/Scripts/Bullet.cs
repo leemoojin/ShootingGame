@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public int type;
     public float shootspeed;
 
-    public void SetBuletType(int bulletType)
+    public void SetBulletType(int bulletType)
     {
         type = bulletType;
 

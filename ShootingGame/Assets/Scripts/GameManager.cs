@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         if(time < 5)
         {
             Instantiate(smallPlane);
+            Instantiate(bombPlane);
         }
         else if(time>5 && time<10)
         {
