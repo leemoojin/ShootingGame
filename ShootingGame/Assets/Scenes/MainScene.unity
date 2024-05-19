@@ -158,7 +158,7 @@ MonoBehaviour:
   bombPlane: {fileID: 8052832116550589811, guid: d61e6ec5b4eb4ba4fb22c19bb612bb3d, type: 3}
   stone: {fileID: 5116420568368788565, guid: e21e40ae035b26b48b480326f2c78f94, type: 3}
   meteor: {fileID: 6820629402145598082, guid: 59c4a60152770a649a4430ceeaa7fde1, type: 3}
-  Player: {fileID: 0}
+  Player: {fileID: 823010160}
 --- !u!4 &218404675
 Transform:
   m_ObjectHideFlags: 0
