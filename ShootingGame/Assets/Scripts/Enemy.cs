@@ -4,37 +4,58 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject Bullet;
+    public GameObject bullet;
 
     public int type;
     public int hp;
     public float speed;
+    public float fireRate;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        InvokeRepeating("Shoot", 0f, 1f);
+        setEnemyAttributes();
 
         float x = Random.Range(-2.2f, 2.2f);
 
         transform.position = new Vector2(x, 5f);
 
-        switch(type)
+        StartCoroutine(fire());
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position += Vector3.down * speed;
+
+        if(transform.position.y < -6f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void setEnemyAttributes()
+    {
+        switch (type)
         {
             //소형 비행기
             case 0:
                 hp = 1;
                 speed = 0.003f;
+                fireRate = 1;
                 break;
             //중형 비행기
             case 1:
                 hp = 2;
                 speed = 0.005f;
+                fireRate = 0.5f;
                 break;
             //대형 비행기
             case 2:
                 hp = 5;
                 speed = 0.002f;
+                fireRate = 1.5f;
                 break;
             //자폭기
             case 3:
@@ -55,19 +76,19 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator fire()
     {
-        transform.position += Vector3.down * speed;
-
-        if(transform.position.y < -6f)
+        while (true)
         {
-            Destroy(gameObject);
+            Shoot();
+            yield return new WaitForSeconds(fireRate);
         }
     }
 
     private void Shoot()
     {
-        Instantiate(Bullet, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        GameObject BulletInstance = Instantiate(bullet, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        Bullet bulletScript = BulletInstance.GetComponent<Bullet>();
+        bulletScript.SetBuletType(type);
     }
 }

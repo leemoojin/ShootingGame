@@ -7,21 +7,20 @@ public class Bullet : MonoBehaviour
     public int type;
     public float shootspeed;
 
-    private void Start()
+    public void SetBuletType(int bulletType)
     {
-        Enemy enemy = new Enemy();
-        type = enemy.type;
+        type = bulletType;
 
         switch(type)
         {
             case 0:
-                shootspeed = 0.005f;
+                shootspeed = 0.008f;
                 break;
             case 1:
-                shootspeed = 0.007f;
+                shootspeed = 0.01f;
                 break;
             case 2:
-                shootspeed = 0.003f;
+                shootspeed = 0.005f;
                 transform.localScale = new Vector2(1.5f, 1.5f);
                 break;
         }
