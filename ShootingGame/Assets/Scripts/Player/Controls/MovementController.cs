@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
     public event Action OnFireEvent;
     public event Action OnBombEvent;
     public bool isPressed;
+    public bool isPressed_bomb;
 
     public void CallMoveEvent(Vector2 direction)
     {

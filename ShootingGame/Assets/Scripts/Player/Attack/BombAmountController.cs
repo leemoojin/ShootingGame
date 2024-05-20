@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BombAmountController : MonoBehaviour
 {
-    [SerializeField] private int currentBombCount;
+    public int currentBombCount;
     [SerializeField] private int maximumBombCount;
 
     public void UseBomb(int bombCount)
