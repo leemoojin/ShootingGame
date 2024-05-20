@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingManager : MonoBehaviour
+public class SetBtn : MonoBehaviour
 {
-    public static SettingManager Instance 
+    public static SetBtn Instance 
     { 
         get; 
         set;
