@@ -10,7 +10,7 @@ public class GeneratePrefab : MonoBehaviour
     [SerializeField] private GameObject HP;
     [SerializeField] private GameObject[] EnhanceAttack;
     [SerializeField] private GameObject Bomb;
-    //[SerializeField] private GameObject Shield;
+    [SerializeField] private GameObject Shield;
     //[SerializeField] private GameObject IncreaseScore;
     public Vector3[] spawnPositions;
 
@@ -38,6 +38,9 @@ public class GeneratePrefab : MonoBehaviour
         hp.transform.position = new Vector3(5f, 2, 0);
 
         SpawnEnhancedAttacks();
+
+        var shield = GameObject.Instantiate(Shield);
+        shield.transform.position = new Vector3(0,2.54f,0);
 
     }
 

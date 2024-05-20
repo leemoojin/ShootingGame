@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5143341031531444394}
-  - component: {fileID: 6517772686355654587}
   - component: {fileID: 95302711306909671}
-  - component: {fileID: 6457640576314295380}
+  - component: {fileID: -299522747511875409}
+  - component: {fileID: -3697004755407498948}
   m_Layer: 16
   m_Name: Item_Shield
   m_TagString: Untagged
@@ -35,33 +35,6 @@ Transform:
   - {fileID: 6718567493297447966}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &6517772686355654587
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3621424074376780518}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!58 &95302711306909671
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -97,7 +70,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0018560439, y: 0}
   serializedVersion: 2
   m_Radius: 0.23829861
---- !u!114 &6457640576314295380
+--- !u!114 &-299522747511875409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,12 +79,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3621424074376780518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df83cd40690dc564f86c060bbcb8ccb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 12c9342e409a5f84681c251c67beb653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 8b06d576526d4cc419bf90d41a013708, type: 2}
-  player1Data: {fileID: 11400000, guid: 2ff85a0422074f042ac41d797f32b53b, type: 2}
-  player2Data: {fileID: 11400000, guid: 95334e6be2535344c80c3e1f1e5c8a81, type: 2}
+--- !u!114 &-3697004755407498948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621424074376780518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5f1deeb48a8fe48bed6e24eb5454f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldHP: 2
 --- !u!1 &5454362991185410019
 GameObject:
   m_ObjectHideFlags: 0
