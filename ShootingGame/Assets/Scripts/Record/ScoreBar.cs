@@ -9,12 +9,9 @@ public class ScoreBar : MonoBehaviour
     [SerializeField] private TMP_Text _point1P;
     [SerializeField] private TMP_Text _playTime1P;
 
-    [SerializeField] private TMP_Text _rank2P;
     [SerializeField] private GameObject _Image2P;
     [SerializeField] private TMP_Text _point2P;
     [SerializeField] private TMP_Text _playTime2P;
-
-
 
     // _record 값을 외부에서 설정하는 메서드
     public void SetRecord(Record record)
@@ -36,7 +33,6 @@ public class ScoreBar : MonoBehaviour
             _point1P.text = Convert.ToString(record.Score1P);
             _playTime1P.text = record.PlayTime1P;
 
-
         }
         else 
         {
@@ -48,8 +44,7 @@ public class ScoreBar : MonoBehaviour
             //_Image1P
             _point1P.text = Convert.ToString(record.Score1P);
             _playTime1P.text = record.PlayTime1P;
-
-            _rank2P.text = Convert.ToString($"{rank}");
+            
             //이미지 설정
             //_Image2P
             _point2P.text = Convert.ToString(record.Score2P);
