@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2511260822496752446}
   - component: {fileID: 4479652484943321286}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7377191034433523510}
   - component: {fileID: 6366227201128265699}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
