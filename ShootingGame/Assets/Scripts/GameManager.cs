@@ -46,26 +46,6 @@ public class GameManager : MonoBehaviour
 
     private void MakePlane()
     {
-        if (time < 5)
-        {
-            Instantiate(smallPlane);
-            Instantiate(bombPlane);
-        }
-        else if (time > 5 && time < 10)
-        {
-            Instantiate(middlePlane);
-        }
-        else if (time > 10 && time < 15)
-        {
-            Instantiate(largePlane);
-        }
-        else if (time > 15 && time < 20)
-        {
-            Instantiate(stone);
-        }
-        else if (time > 20 && time < 30)
-        {
-            Instantiate(meteor);
-        }
+        Instantiate(smallPlane);
     }
 }
