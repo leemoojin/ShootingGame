@@ -1137,6 +1137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 1
   maximumHealth: 3
+  spriteRenderer: {fileID: 3426059983925705741}
 --- !u!114 &-4183113293737495833
 MonoBehaviour:
   m_ObjectHideFlags: 0

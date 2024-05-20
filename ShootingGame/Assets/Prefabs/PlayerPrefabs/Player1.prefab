@@ -440,8 +440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc45c279ea416146800a6dee4756843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 1
+  currentHealth: 3
   maximumHealth: 3
+  spriteRenderer: {fileID: 2833584073576578233}
 --- !u!114 &-3008964355609160831
 MonoBehaviour:
   m_ObjectHideFlags: 0

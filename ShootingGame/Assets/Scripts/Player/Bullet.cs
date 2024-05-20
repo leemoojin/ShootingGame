@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-       if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (transform.position.y > 6)
         {
-            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }

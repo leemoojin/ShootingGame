@@ -131,4 +131,20 @@ public class Enemy : MonoBehaviour
         EnemyBullet bulletScript = BulletInstance.GetComponent<EnemyBullet>();
         bulletScript.SetBulletType(type);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            hp -= 1;
+
+            float decreaseAmount = 1f / hp;
+            GetComponentInChildren<SpriteRenderer>().color = new Color(decreaseAmount, 0, 0, 1);
+
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
