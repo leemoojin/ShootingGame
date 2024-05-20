@@ -16,13 +16,12 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        player1 = GameObject.FindWithTag("Player");
-        player2 = GameObject.FindWithTag("Player");
+        player1 = GameObject.FindWithTag("Player1");
+        player2 = GameObject.FindWithTag("Player2");
 
         setEnemyAttributes();
 
         float x = Random.Range(-2.2f, 2.2f);
-
         transform.position = new Vector2(x, 5f);
 
         StartCoroutine(fire());
@@ -32,11 +31,23 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (type == 3 && (player1 != null || player2 != null))
+        Move();
+    }
+
+    private void Move()
+    {
+        if (type == 3)
         {
-            GameObject targetPlayer = player1 != null ? player1 : player2;
-            Vector3 direction = (targetPlayer.transform.position - transform.position).normalized;
-            transform.position += direction * speed * Time.deltaTime;
+            GameObject targetPlayer = GetClosestPlayer();
+            if (targetPlayer != null)
+            {
+                Vector3 direction = (targetPlayer.transform.position - transform.position).normalized;
+
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+
+                transform.position += direction * speed * Time.deltaTime;
+            }
         }
         else
         {
@@ -47,6 +58,18 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private GameObject GetClosestPlayer()
+    {
+        if (player1 == null && player2 == null) return null;
+        if (player1 == null) return player2;
+        if (player2 == null) return player1;
+
+        float distToPlayer1 = Vector3.Distance(transform.position, player1.transform.position);
+        float distToPlayer2 = Vector3.Distance(transform.position, player2.transform.position);
+
+        return distToPlayer1 < distToPlayer2 ? player1 : player2;
     }
 
     //비행기 생성 정보

@@ -12,6 +12,8 @@ TagManager:
   - PlayTime1P
   - PlayTime2P
   - Image1P
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

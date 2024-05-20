@@ -215,6 +215,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &596782968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596782970}
+  - component: {fileID: 596782969}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &596782969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596782968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb72e408084269488712a15b7e03cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallPlane: {fileID: 7688099651422237488, guid: e3af9bd55b09e5046bb082de90dc2a7f, type: 3}
+  middlePlane: {fileID: 6324357422959440175, guid: 0d087b6975fb2714ebe511a3316d2564, type: 3}
+  largePlane: {fileID: 5543657859176903560, guid: 5eb50a05511cb0e49969c68fb4e781bc, type: 3}
+  bombPlane: {fileID: 7485673842378343594, guid: cc7fd5fe754633b4b8f2e06105ab44b1, type: 3}
+  stone: {fileID: 7761493491276741379, guid: 2e6079044ea335f439500c0679fbd11b, type: 3}
+  meteor: {fileID: 6366227201128265699, guid: ede8ae1d96dce0e49a8674ab00f66866, type: 3}
+  Player1: {fileID: 2091477771856809546, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
+  Player2: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
+--- !u!4 &596782970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596782968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.8101177, y: 3.5420973, z: -0.01009091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573060333
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,3 +332,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1573060334}
+  - {fileID: 596782970}
