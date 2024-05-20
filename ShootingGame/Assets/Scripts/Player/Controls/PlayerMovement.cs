@@ -5,31 +5,43 @@ public class PlayerMovement : MonoBehaviour
 {
     private MovementController movementController;
     private Rigidbody2D movementRigidbody;
+    
 
     EnhaceAttackController attackController;
+    BombAmountController bombAmountController;
+    Bomb bombControl;
     
     private Vector2 movementDirection = Vector2.zero;
+    private GameObject bomb;
+    
 
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject bombPrefab;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Transform[] shootpoints2;
     [SerializeField] private Transform[] shootpoints3;
     [SerializeField] private Transform[] shootpoints4;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float bombSpeed;
+   
 
     private bool wasPressed = false;
+    private bool wasPressed_bomb = false;
 
     private void Awake()
     {
         movementController = GetComponent<MovementController>();
         movementRigidbody = GetComponent<Rigidbody2D>();      
         attackController = GetComponent<EnhaceAttackController>();
+        bombAmountController = GetComponent<BombAmountController>();
+        bombControl = GetComponent<Bomb>();
     }
 
     private void Start()
     {
         movementController.OnMoveEvent += Move;
         movementController.OnFireEvent += Fire;
+        movementController.OnBombEvent += Bomb;
     }
 
     private void FixedUpdate()
@@ -41,8 +53,21 @@ public class PlayerMovement : MonoBehaviour
             Fire();
         }
         wasPressed = movementController.isPressed;
-    }
 
+        if (bombAmountController.currentBombCount >= 1)
+        {
+           if(movementController.isPressed_bomb && !wasPressed_bomb)
+                Bomb();
+            
+        }
+        else if (bombAmountController.currentBombCount <= 0)
+        {
+            return;
+        }
+        
+
+    }
+   
     private void Move(Vector2 direction)
     {
         movementDirection = direction;
@@ -126,8 +151,20 @@ public class PlayerMovement : MonoBehaviour
     private void Bomb()
     {
         
+        bomb = Instantiate(bombPrefab, shootPoint.position, Quaternion.identity);
+        Rigidbody2D rigidbody = bomb.GetComponent<Rigidbody2D>();
+        rigidbody.velocity = bombSpeed * Vector2.up;
+
+        Invoke("CallBombExplode", 1f);
     }
 
+    public void CallBombExplode()
+    {
+
+        Debug.Log("CallbombExplode");
+        bombControl.BombExplode(bomb);
+        
+    }
   
 
 }

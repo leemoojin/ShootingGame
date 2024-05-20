@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: -3008964355609160831}
   - component: {fileID: 8816988608568402748}
   - component: {fileID: 1372838568017736923}
+  - component: {fileID: 8520572579391667453}
   m_Layer: 13
   m_Name: Player1
   m_TagString: Player
@@ -319,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
+  isPressed_bomb: 0
 --- !u!114 &5385796910334856862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5662401682890689129, guid: 78ab39279d9cf964a897a9d56546d0b4, type: 3}
+  bombPrefab: {fileID: 5662401682890689129, guid: 5c31bd1c84aa6dc43af64379f0221df0, type: 3}
   shootPoint: {fileID: 4867143992161378342}
   shootpoints2:
   - {fileID: 6574124321259190264}
@@ -345,7 +348,8 @@ MonoBehaviour:
   - {fileID: 7560656424514375786}
   - {fileID: 2560628001681448385}
   - {fileID: 3750732283060548284}
-  bulletSpeed: 5
+  bulletSpeed: 10
+  bombSpeed: 5
 --- !u!50 &9020473921145740679
 Rigidbody2D:
   serializedVersion: 4
@@ -482,6 +486,19 @@ MonoBehaviour:
   currentShieldHP: 0
   maxShieldHP: 2
   shield: {fileID: 4288543515544623193}
+--- !u!114 &8520572579391667453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091477771856809546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def4a19edf8a5aa45b3e400d0a062d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombDamage: 10
 --- !u!1 &2515484854644647638
 GameObject:
   m_ObjectHideFlags: 0
