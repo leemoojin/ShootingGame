@@ -15,6 +15,8 @@ public class RecordBtn : MonoBehaviour
 
     public void SingleBtn()
     {
+        Debug.Log("RecordBtn.cs - SingleBtn() - 싱글 버튼 클릭");
+
         RecordManager.IsMulti = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

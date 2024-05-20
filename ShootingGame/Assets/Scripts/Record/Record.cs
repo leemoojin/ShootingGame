@@ -8,7 +8,7 @@ public class Record
     public string PlayTime1P { get; set; }
     public int Score2P { get; set; }
     public string PlayTime2P { get; set; }
-    public bool IsMulti { get; private set; }
+    public bool IsMulti { get; set; }
 
     public Record(int score1P, string playTime1P)
     {
