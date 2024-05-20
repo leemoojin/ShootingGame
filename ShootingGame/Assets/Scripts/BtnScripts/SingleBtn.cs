@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RankBtn : MonoBehaviour
+public class SingleBtn : MonoBehaviour
 {
-   public void Rank()
+    public void Single()
     {
-        SceneManager.LoadScene("RecordScene");
+        SceneManager.LoadScene("SingleScene");
     }
 }
