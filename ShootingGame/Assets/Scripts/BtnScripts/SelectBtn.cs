@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class SelectBtn : MonoBehaviour
 {
-    public Button SelectButton;
-    public Sprite CharacterSprite;
+    public Button selectButton;
+    public Sprite characterSprite;
 
     void Start()
     {
-        SelectButton.onClick.AddListener(() => Character());
+        selectButton.onClick.AddListener(() => CharacterSelect());
     }
 
-    void Character()
+    void CharacterSelect()
     {
         SelectCharacter selectCharacter = FindObjectOfType<SelectCharacter>();
         if (selectCharacter != null)
         {
-            selectCharacter.SelectFighter(CharacterSprite);
+            selectCharacter.CharacterSelecter(characterSprite);
         }
     }
 }

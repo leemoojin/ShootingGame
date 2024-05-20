@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb72e408084269488712a15b7e03cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpaceShipImage: {fileID: 0}
   smallPlane: {fileID: 7688099651422237488, guid: e3af9bd55b09e5046bb082de90dc2a7f, type: 3}
   middlePlane: {fileID: 6324357422959440175, guid: 0d087b6975fb2714ebe511a3316d2564, type: 3}
   largePlane: {fileID: 5543657859176903560, guid: 5eb50a05511cb0e49969c68fb4e781bc, type: 3}

@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SelectCharacter : MonoBehaviour
 {
-    public void SelectFighter(Sprite CharacterSprite)
+    public void CharacterSelecter(Sprite CharacterSprite)
     {
         // 선택된 전투기의 스프라이트 이름을 PlayerPrefs에 저장
-        PlayerPrefs.SetString("SelectedFighter", CharacterSprite.name);
+        PlayerPrefs.SetString("CharacterSelecter", CharacterSprite.name);
 
         
         SceneManager.LoadScene("MainScene");
