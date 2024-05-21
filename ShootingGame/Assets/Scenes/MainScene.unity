@@ -549,8 +549,8 @@ MonoBehaviour:
   bombPlane: {fileID: 7485673842378343594, guid: cc7fd5fe754633b4b8f2e06105ab44b1, type: 3}
   stone: {fileID: 7761493491276741379, guid: 2e6079044ea335f439500c0679fbd11b, type: 3}
   meteor: {fileID: 6366227201128265699, guid: ede8ae1d96dce0e49a8674ab00f66866, type: 3}
-  playerprefab1: {fileID: 0}
-  playerprefab2: {fileID: 0}
+  playerprefab1: {fileID: 2091477771856809546, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
+  playerprefab2: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
   EnhanceAttack: []
   spawnPositions: []
   TimeTxt: {fileID: 820226833}
@@ -733,7 +733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1573060334
 Transform:
   m_ObjectHideFlags: 0

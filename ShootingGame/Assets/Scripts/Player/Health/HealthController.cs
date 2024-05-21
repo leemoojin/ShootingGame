@@ -20,39 +20,49 @@ public class HealthController : MonoBehaviour
         shieldController = GetComponent<ShieldController>();
     }
 
+    private void Update()
+    {
+        if(currentHealth == 0)
+        {
+            Debug.Log("게임 오버");
+            SceneManager.LoadScene("GameoverScene");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("EnemyBullet"))
+        if (currentHealth >= 1 && shieldController.isShieldON == false)
         {
-            TakeDamgage(1);
-        }
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamgage(1);
+            if (collision.gameObject.CompareTag("EnemyBullet"))
+            {
+                TakeDamgage(1);
+            }
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                TakeDamgage(1);
+            }
         }
     }
 
 
     public void TakeDamgage(int damageAmount)
     {
-        if (currentHealth == 0 && shieldController.isShieldON == false)
-        {
-            Debug.Log("게임 오버");
-            //SceneManager.LoadScene("GameoverScene");
-        }
-
-        if (currentHealth > 1 && shieldController.isShieldON == false)
+        
+        if (currentHealth >= 1 && shieldController.isShieldON == false)
         {
             currentHealth -= damageAmount;
             attackController.reduceBulletLine(damageAmount);
             isInvincible = true;
             StartCoroutine("InvincibleTime");
+            
+           
         }
         if(currentHealth < 0 && shieldController.isShieldON == false)
         {
             currentHealth = 0;
             
         }
+        Debug.Log("현재 체력" + currentHealth);
     }
 
     public void AddHealth(int amountToAdd)
