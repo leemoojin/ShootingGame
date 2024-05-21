@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] EnhanceAttack;
     public Vector3[] spawnPositions;
 
-    float score;
+    public Text TimeTxt;
+    public Text ScoreTxt;
+
+    int score;
 
     float time = 0.0f;
 
@@ -55,15 +59,17 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
+        TimeTxt.text = time.ToString("N2");
     }
 
     public void AddScore(float value)
     {
-        score += value;
-        Debug.Log("score"+score);
+        float timeScore = time;
+        score += (int)(value + timeScore);
+        ScoreTxt.text = score.ToString();
     }
 
-    private void MakePlane()    
+    private void MakePlane()
     {
         Instantiate(smallPlane);
     }

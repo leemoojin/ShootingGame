@@ -160,6 +160,8 @@ public class Enemy : MonoBehaviour
             if(Random.Range(0,1f) <= 0.3f)
             {
                 SpawnRandomItem();
+                GameManager.Instance.AddScore(score);
+                Destroy(gameObject);
             }
             Destroy(gameObject);
         }
@@ -218,8 +220,6 @@ public class Enemy : MonoBehaviour
             else
             {
                 randomPoint -= itemsWithProbabilities[i].Item2;
-                GameManager.Instance.AddScore(score);
-                Destroy(gameObject);
             }
         }
         return null;
