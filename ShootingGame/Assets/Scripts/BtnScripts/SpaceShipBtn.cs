@@ -15,7 +15,7 @@ public class SpaceShipBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     
     void Start()
-    {
+    {   
         
         spaceshipBtn.onClick.AddListener(SelectSpaceShip);
 
@@ -45,7 +45,7 @@ public class SpaceShipBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         // 선택된 전투기의 스프라이트 이름을 PlayerPrefs에 저장
         PlayerPrefs.SetString("SelectedSpaceShip", spaceshipSprite.name);
-
+        PlayerPrefs.Save();
         // 메인 씬으로 전환
         SceneManager.LoadScene("MainScene");
     }

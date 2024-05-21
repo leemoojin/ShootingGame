@@ -18,18 +18,19 @@ public class GeneratePrefab : MonoBehaviour
     private void Start()
     {
 
-        if (ButtonClicked()) // 만약 버튼이 클릭되었다면
+        if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {
             // 플레이어 1 프리팹 생성
             var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
             player1.transform.position = new Vector3(5.5f, -4f, 0);
         }
-
         else
         {
-            var player2 = PlayerInput.Instantiate(playerprefab2, controlScheme: "Player2", pairWithDevices: new InputDevice[] { Keyboard.current });
+            // 플레이어 1 프리팹 생성 (조건 만족하지 않음)
+            var player2 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
             player2.transform.position = new Vector3(-5.5f, -4f, 0);
         }
+
 
         //var coin = GameObject.Instantiate(Coin);
         //coin.transform.position = new Vector3(-7.2f, 2, 0);
@@ -59,8 +60,5 @@ public class GeneratePrefab : MonoBehaviour
         }
     }
 
-    private bool ButtonClicked()
-    {
-        return PlayerPrefs.HasKey("SelectedSpaceShip");
-    }
+    
 }
