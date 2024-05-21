@@ -1137,6 +1137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 1
   maximumHealth: 3
+  isInvincible: 0
   spriteRenderer: {fileID: 3426059983925705741}
 --- !u!114 &-4183113293737495833
 MonoBehaviour:
@@ -1182,6 +1183,7 @@ MonoBehaviour:
   currentShieldHP: 0
   maxShieldHP: 2
   shield: {fileID: 6124970932486770014}
+  isShieldON: 0
 --- !u!114 &-7513438154797665211
 MonoBehaviour:
   m_ObjectHideFlags: 0

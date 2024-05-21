@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Image SpaceShipImage;
+    
 
     public Enemy smallPlane;
     public Enemy middlePlane;
@@ -38,21 +38,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // PlayerPrefs에서 선택된 전투기 이미지 이름을 가져옴
-        string SelectCharacter = PlayerPrefs.GetString("CharacterSelect");
-
-        // 선택된 전투기 이미지를 Resources 폴더에서 로드
-        Sprite fighterSprite = Resources.Load<Sprite>("SpaceShips/" + SelectCharacter);
-
-        if (fighterSprite != null)
-        {
-            // 선택된 전투기 이미지를 UI Image 컴포넌트에 설정
-            SpaceShipImage.sprite = fighterSprite;
-        }
-        else
-        {
-            Debug.LogError("Selected fighter sprite not found");
-        }
         InvokeRepeating("MakePlane", 0f, 1f);
     }
 

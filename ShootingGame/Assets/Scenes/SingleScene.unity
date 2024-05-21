@@ -409,9 +409,9 @@ GameObject:
   - component: {fileID: 469878591}
   - component: {fileID: 469878590}
   - component: {fileID: 469878589}
-  - component: {fileID: 469878588}
+  - component: {fileID: 469878592}
   m_Layer: 5
-  m_Name: CharacterBtn
+  m_Name: SpaceShipBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,22 +434,8 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 270, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &469878588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469878586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babb61f14e7a5074aa8ca6b25b059160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectButton: {fileID: 469878589}
-  characterSprite: {fileID: 21300000, guid: a507e4d319138d44482579bc5610a9e5, type: 3}
 --- !u!114 &469878589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,19 +479,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 469878590}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 469878589}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &469878590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +518,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469878586}
   m_CullTransparentMesh: 1
+--- !u!114 &469878592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469878586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f47f2637d8c337449820dad4633f909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
+  spaceshipBtn: {fileID: 469878589}
+  spaceshipSprite: {fileID: 21300000, guid: a507e4d319138d44482579bc5610a9e5, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,10 +789,9 @@ GameObject:
   - component: {fileID: 1082886286}
   - component: {fileID: 1082886285}
   - component: {fileID: 1082886284}
-  - component: {fileID: 1082886283}
   - component: {fileID: 1082886287}
   m_Layer: 5
-  m_Name: CharacterBtn
+  m_Name: SpaceShipBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -826,22 +814,8 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -270, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1082886283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082886281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babb61f14e7a5074aa8ca6b25b059160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectButton: {fileID: 1082886284}
-  characterSprite: {fileID: 21300000, guid: f7eb00cb3ec9bab45b85d561558c4250, type: 3}
 --- !u!114 &1082886284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,19 +859,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1082886285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1082886287}
-        m_TargetAssemblyTypeName: SelectCharacter, Assembly-CSharp
-        m_MethodName: CharacterSelecter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1082886285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,9 +907,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1082886281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 184d845dc751e424ab0f0b9409f57490, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f47f2637d8c337449820dad4633f909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 50
+  spaceshipBtn: {fileID: 1082886284}
+  spaceshipSprite: {fileID: 21300000, guid: f7eb00cb3ec9bab45b85d561558c4250, type: 3}
 --- !u!1 &1118177811
 GameObject:
   m_ObjectHideFlags: 0
