@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +15,16 @@ public class GameManager : MonoBehaviour
     public Enemy stone;
     public Enemy meteor;
 
-    public GameObject Player1;
-    public GameObject Player2;
+    [SerializeField] private GameObject playerprefab1;
+    [SerializeField] private GameObject playerprefab2;
 
+    [SerializeField] private GameObject[] EnhanceAttack;
+    public Vector3[] spawnPositions;
+
+    public Text TimeTxt;
+    public Text ScoreTxt;
+
+    int score;
 
     float time = 0.0f;
 
@@ -36,16 +45,41 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("MakePlane", 0f, 1f);
+
+        var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
+        var player2 = PlayerInput.Instantiate(playerprefab2, controlScheme: "Player2", pairWithDevices: new InputDevice[] { Keyboard.current });
+
+        player1.transform.position = new Vector3(1f, -4f, 0);
+        player2.transform.position = new Vector3(-1f, -4f, 0);
+
+        SpawnEnhancedAttacks();
     }
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
+        TimeTxt.text = time.ToString("N2");
+    }
+
+    public void AddScore(float value)
+    {
+        float timeScore = time;
+        score += (int)(value + timeScore);
+        ScoreTxt.text = score.ToString();
     }
 
     private void MakePlane()
     {
         Instantiate(smallPlane);
+    }
+
+    private void SpawnEnhancedAttacks()
+    {
+        for (int i = 0; i < spawnPositions.Length; i++)
+        {
+            Instantiate(EnhanceAttack[i % EnhanceAttack.Length], spawnPositions[i], Quaternion.identity);
+
+        }
     }
 }

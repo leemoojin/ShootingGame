@@ -7,12 +7,12 @@ public class Enemy : MonoBehaviour
     public GameObject bullet;
     public GameObject player1;
     public GameObject player2;
-    
 
-    public int type;
-    public int hp;
-    public float speed;
-    public float fireRate;
+    int type;
+    int hp;
+    float speed;
+    float fireRate;
+    float score;
 
     [SerializeField] private GameObject HP;
     [SerializeField] private GameObject EnhanceAttack;
@@ -94,33 +94,40 @@ public class Enemy : MonoBehaviour
                 hp = 1;
                 speed = 0.3f;
                 fireRate = 2f;
+                fireRate = 1;
+                score = 5;
                 break;
             //중형 비행기
             case 1:
                 hp = 2;
                 speed = 0.5f;
                 fireRate = 0.5f;
+                score = 10;
                 break;
             //대형 비행기
             case 2:
                 hp = 5;
                 speed = 0.2f;
                 fireRate = 1.5f;
+                score = 15;
                 break;
             //자폭기
             case 3:
                 hp = 1;
                 speed = 1f;
+                score = 10;
                 break;
             //운석
             case 4:
                 hp = 10;
                 speed = 0.1f;
+                score = 20;
                 break;
             //메테오
             case 5:
                 hp = 100;
                 speed = 0.8f;
+                score = 20;
                 break;
 
         }
@@ -153,6 +160,8 @@ public class Enemy : MonoBehaviour
             if(Random.Range(0,1f) <= 0.3f)
             {
                 SpawnRandomItem();
+                GameManager.Instance.AddScore(score);
+                Destroy(gameObject);
             }
             Destroy(gameObject);
         }
