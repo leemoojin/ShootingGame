@@ -14,6 +14,13 @@ public class Enemy : MonoBehaviour
     float fireRate;
     float score;
 
+    [SerializeField] private GameObject HP;
+    [SerializeField] private GameObject EnhanceAttack;
+    [SerializeField] private GameObject Bomb;
+    [SerializeField] private GameObject Shield;
+
+    
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -26,6 +33,7 @@ public class Enemy : MonoBehaviour
         transform.position = new Vector2(x, 5f);
 
         StartCoroutine(fire());
+        
     }
 
 
@@ -33,6 +41,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
+       
+        
+
     }
 
     private void Move()
@@ -82,6 +93,7 @@ public class Enemy : MonoBehaviour
             case 0:
                 hp = 1;
                 speed = 0.3f;
+                fireRate = 2f;
                 fireRate = 1;
                 score = 5;
                 break;
@@ -139,20 +151,78 @@ public class Enemy : MonoBehaviour
         bulletScript.SetBulletType(type);
     }
 
+    public void DecreaseEnemyHP(int damage)
+    {
+        hp -= damage;
+        
+        if (hp <= 0)
+        {
+            if(Random.Range(0,1f) <= 0.3f)
+            {
+                SpawnRandomItem();
+            }
+            Destroy(gameObject);
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            hp -= 1;
+            Destroy(collision.gameObject);
+            DecreaseEnemyHP(1);
 
             float decreaseAmount = 1f / hp;
             GetComponentInChildren<SpriteRenderer>().color = new Color(decreaseAmount, 0, 0, 1);
+        }
+    }
 
-            if (hp <= 0)
+    private void SpawnRandomItem()
+    {
+        // 아이템 드롭 확률
+        var itemsWithProbabilities = new List<(GameObject, float)>
+    {
+        (HP, 0.1f),
+        (EnhanceAttack, 0.2f),
+        (Bomb, 0.1f),
+        (Shield, 0.15f)
+    };
+
+        
+        GameObject selectedItem = GetRandomItemWithProbability(itemsWithProbabilities);
+
+        
+        if (selectedItem != null)
+        {
+            Instantiate(selectedItem, transform.position, Quaternion.identity);
+        }
+    }
+
+    private GameObject GetRandomItemWithProbability(List<(GameObject, float)> itemsWithProbabilities)
+    {
+        float totalProbability = 0;
+        foreach (var item in itemsWithProbabilities)
+        {
+            totalProbability += item.Item2;
+        }
+
+        float randomPoint = Random.value * totalProbability;
+
+        for (int i = 0; i < itemsWithProbabilities.Count; i++)
+        {
+            if (randomPoint < itemsWithProbabilities[i].Item2)
             {
+                return itemsWithProbabilities[i].Item1;
+            }
+            else
+            {
+                randomPoint -= itemsWithProbabilities[i].Item2;
                 GameManager.Instance.AddScore(score);
                 Destroy(gameObject);
             }
         }
+        return null;
     }
+
 }
