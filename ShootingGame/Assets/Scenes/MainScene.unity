@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596782970}
   - component: {fileID: 596782969}
+  - component: {fileID: 596782972}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -599,6 +600,7 @@ MonoBehaviour:
   playerprefab2: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
   EnhanceAttack: []
   spawnPositions: []
+  levelDesign: {fileID: 0}
 --- !u!4 &596782970
 Transform:
   m_ObjectHideFlags: 0
@@ -614,6 +616,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596782972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596782968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94d5a4f8536db347b4374e5322a6700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallPlane: {fileID: 7688099651422237488, guid: e3af9bd55b09e5046bb082de90dc2a7f, type: 3}
 --- !u!1 &791708930
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,11 +907,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
       propertyPath: m_LocalPosition.z

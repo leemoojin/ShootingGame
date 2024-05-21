@@ -5,19 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance;
-
     public Text TimeTxt;
     public Text ScoreTxt;
 
     private int score;
     private float time = 0.0f;
     private float scoreFromTime = 0.0f;
-
-    private void Awake()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,10 +25,11 @@ public class ScoreManager : MonoBehaviour
     {
         score += (int)value;
         UpdateScoreText(); // 점수 업데이트
+        Debug.Log($"점수 추가: {value}. 현재 점수: {score}");
     }
 
     private void UpdateScoreText()
     {
-        ScoreTxt.text = (score + scoreFromTime).ToString("N2"); // 현재 점수 + 시간에 따른 점수 업데이트
+        ScoreTxt.text = ((int)(score + scoreFromTime)).ToString();
     }
 }

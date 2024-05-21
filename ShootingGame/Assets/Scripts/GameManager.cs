@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] EnhanceAttack;
     public Vector3[] spawnPositions;
 
+    public LevelDesign levelDesign;
+
     private void Awake()
     {
         if (Instance == null)
@@ -38,6 +40,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelDesign = GetComponent<LevelDesign>();
+
+        levelDesign.smallPlane = smallPlane;
+
         InvokeRepeating("MakePlane", 0f, 1f);   
         if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {
@@ -63,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     private void MakePlane()
     {
-        Instantiate(smallPlane);
+        levelDesign.MakePlane();
     }
 
 }
