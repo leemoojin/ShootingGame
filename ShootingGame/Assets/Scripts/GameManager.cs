@@ -64,8 +64,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(float value)
     {
-        float timeScore = time;
-        score += (int)(value + timeScore);
+        score += (int)value;
         ScoreTxt.text = score.ToString();
     }
 
