@@ -8,6 +8,7 @@ public class ShieldController : MonoBehaviour
     [SerializeField] private int maxShieldHP = 2;
     [SerializeField] private GameObject shield;
     public bool isShieldON = false;
+    private bool isInvincible = false;
 
     public void TakeDamage(int damageAmount)
     {
@@ -16,6 +17,7 @@ public class ShieldController : MonoBehaviour
             shield.SetActive(false);
             isShieldON = false;
         }
+        StartCoroutine(ShieldInvincible());
         currentShieldHP -= damageAmount;
 
         if(currentShieldHP < 0)
@@ -23,6 +25,12 @@ public class ShieldController : MonoBehaviour
             currentShieldHP = 0;
             isShieldON = false;
         }
+    }
+    IEnumerator ShieldInvincible()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(0.3f);
+        isInvincible = false;
     }
 
     public void GenerateShield(int shieldHP)
@@ -41,6 +49,10 @@ public class ShieldController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            TakeDamage(1);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage(1);
         }
