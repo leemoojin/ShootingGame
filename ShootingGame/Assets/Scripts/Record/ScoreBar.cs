@@ -53,4 +53,74 @@ public class ScoreBar : MonoBehaviour
         }
              
     }
+
+    public void SetGameOverRecord(Record record)
+    {
+        if (record == null)
+        {
+            Debug.LogError("ScoreBar.cs - SetGameOverRecord() - record is null");
+            return;
+        }
+
+        if (!record.IsMulti)
+        {
+            Debug.Log($"ScoreBar.cs - SetGameOverRecord() - 싱글스코어바");
+
+            _rank1P.text = "-";
+            //이미지 설정
+            //_Image1P
+            _point1P.text = Convert.ToString(record.Score1P);
+            _playTime1P.text = record.PlayTime1P;            
+        }
+        else
+        {
+            Debug.Log($"ScoreBar.cs - SetGameOverRecord() - 멀티스코어바");
+        
+            _rank1P.text = "-";
+            //이미지 설정
+            //_Image1P
+            _point1P.text = Convert.ToString(record.Score1P);
+            _playTime1P.text = record.PlayTime1P;
+
+            //이미지 설정
+            //_Image2P
+            _point2P.text = Convert.ToString(record.Score2P);
+            _playTime2P.text = record.PlayTime2P;
+        }
+    }
+
+    public void SetGameOverRecord(string rank, Record record)
+    {
+        if (record == null)
+        {
+            Debug.LogError("ScoreBar.cs - SetGameOverRecord() - record is null");
+            return;
+        }
+
+        if (!record.IsMulti)
+        {
+            Debug.Log($"ScoreBar.cs - SetGameOverRecord() - 싱글스코어바");
+
+            _rank1P.text = rank;
+            //이미지 설정
+            //_Image1P
+            _point1P.text = Convert.ToString(record.Score1P);
+            _playTime1P.text = record.PlayTime1P;            
+        }
+        else
+        {
+            Debug.Log($"ScoreBar.cs - SetGameOverRecord() - 멀티스코어바");
+        
+            _rank1P.text = rank;
+            //이미지 설정
+            //_Image1P
+            _point1P.text = Convert.ToString(record.Score1P);
+            _playTime1P.text = record.PlayTime1P;
+
+            //이미지 설정
+            //_Image2P
+            _point2P.text = Convert.ToString(record.Score2P);
+            _playTime2P.text = record.PlayTime2P;
+        }
+    }
 }
