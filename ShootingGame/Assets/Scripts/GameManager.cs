@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelDesign = GetComponent<LevelDesign>();
+
+        levelDesign.smallPlane = smallPlane;
+
         InvokeRepeating("MakePlane", 0f, 1f);   
         if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {

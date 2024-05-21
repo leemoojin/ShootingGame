@@ -29,6 +29,6 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        ScoreTxt.text = (score + scoreFromTime).ToString("N2"); // 현재 점수 + 시간에 따른 점수 업데이트
+        ScoreTxt.text = ((int)(score + scoreFromTime)).ToString(); // 현재 점수 + 시간에 따른 점수 업데이트
     }
 }

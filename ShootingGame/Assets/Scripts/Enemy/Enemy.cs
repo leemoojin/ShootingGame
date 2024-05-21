@@ -19,11 +19,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject Bomb;
     [SerializeField] private GameObject Shield;
 
+    public ScoreManager scoreManager;
+
     
 
     // Start is called before the first frame update
     public void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
+
         player1 = GameObject.FindWithTag("Player1");
         player2 = GameObject.FindWithTag("Player2");
 
@@ -41,9 +45,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
-       
-        
-
     }
 
     private void Move()
@@ -161,7 +162,7 @@ public class Enemy : MonoBehaviour
             {
                 SpawnRandomItem();
             }
-            ScoreManager.Instance.AddScore(score);
+            scoreManager.AddScore(score);
             Destroy(gameObject);
         }
 
