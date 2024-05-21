@@ -23,6 +23,8 @@ public class Enemy : MonoBehaviour
 
     
 
+    
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -165,6 +167,7 @@ public class Enemy : MonoBehaviour
             scoreManager.AddScore(score);
             Debug.Log("적이 처치되었습니다. 점수를 추가합니다.");
             Destroy(gameObject);
+           
         }
 
     }
