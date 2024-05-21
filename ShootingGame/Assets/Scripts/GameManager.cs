@@ -22,16 +22,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] EnhanceAttack;
     public Vector3[] spawnPositions;
 
-    public Text TimeTxt;
-    public Text ScoreTxt;
-
-    int score;
-
-    float time = 0.0f;
-
-    public HealthController player1Health;
-    public HealthController player2Health;
-
     private void Awake()
     {
         if (Instance == null)
@@ -68,22 +58,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        TimeTxt.text = time.ToString("N2");
 
-        //TODO : 수정해야함
-       if(player1Health.currentHealth <=0 && player2Health.currentHealth <= 0)
-        {
-            Debug.Log("게임오버");
-            SceneManager.LoadScene("GameoverScene");
-
-        }
-    }
-
-    public void AddScore(float value)
-    {
-        score += (int)value;
-        ScoreTxt.text = score.ToString();
     }
 
     private void MakePlane()
