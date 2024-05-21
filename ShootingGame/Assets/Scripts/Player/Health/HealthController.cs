@@ -26,10 +26,6 @@ public class HealthController : MonoBehaviour
         {
             TakeDamgage(1);
         }
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamgage(1);
-        }
     }
 
 

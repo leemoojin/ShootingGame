@@ -1,7 +1,5 @@
 ﻿using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     EnhaceAttackController attackController;
     BombAmountController bombAmountController;
-    
-    
+    Bomb bombControl;
     
     private Vector2 movementDirection = Vector2.zero;
     private GameObject bomb;
@@ -26,22 +23,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform[] shootpoints4;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bombSpeed;
-    [SerializeField] private int bombDamage= 10;
+   
 
-
-    public bool isBombExplode = false;
     private bool wasPressed = false;
     private bool wasPressed_bomb = false;
 
     private void Awake()
     {
-        
         movementController = GetComponent<MovementController>();
         movementRigidbody = GetComponent<Rigidbody2D>();      
         attackController = GetComponent<EnhaceAttackController>();
         bombAmountController = GetComponent<BombAmountController>();
-        
-        
+        bombControl = GetComponent<Bomb>();
     }
 
     private void Start()
@@ -169,23 +162,9 @@ public class PlayerMovement : MonoBehaviour
     {
 
         Debug.Log("CallbombExplode");
-        BombExplode(bomb);
-    }
-    public void BombExplode(GameObject bomb)
-    {
+        bombControl.BombExplode(bomb);
         
-        Destroy(bomb);
-
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject enemy in enemies)
-        {
-            Enemy enemyScript = enemy.GetComponent<Enemy>();
-            if(enemyScript != null)
-            {
-                enemyScript.DecreaseEnemyHP(bombDamage);
-            }
-        }
     }
-
+  
 
 }

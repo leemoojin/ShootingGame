@@ -11,25 +11,6 @@ public class PlayerInputController : MovementController
         bombAmountController = GetComponent<BombAmountController>();
     }
 
-    void Update()
-    {
-        // 플레이어의 현재 위치를 가져오기.
-        Vector3 position = transform.position;
-
-        // 카메라의 반경을 계산.
-        float screenRatio = (float)Screen.width / (float)Screen.height;
-        float cameraHeight = Camera.main.orthographicSize;
-        float cameraWidth = cameraHeight * screenRatio;
-
-        // 플레이어의 위치를 카메라의 경계 내로 제한.
-        position.x = Mathf.Clamp(position.x, -cameraWidth, cameraWidth);
-        position.y = Mathf.Clamp(position.y, -cameraHeight, cameraHeight);
-
-        // 제한된 위치를 플레이어에 적용.
-        transform.position = position;
-    }
-
-
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
@@ -57,7 +38,7 @@ public class PlayerInputController : MovementController
             {
                 Debug.Log("폭탄 사용" + value.ToString());
                 CallBombEvent();
-                bombAmountController.UseBomb(bombUse);
+                bombAmountController.UseBomb(1);
                 isPressed_bomb = false;
             }
         }

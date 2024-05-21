@@ -498,10 +498,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackGround (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5863510766138230820, guid: 55b089ef1148b3a4e8ac182d5d8cf616, type: 3}
-      propertyPath: speed
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
