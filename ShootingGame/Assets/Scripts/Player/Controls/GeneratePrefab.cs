@@ -18,12 +18,18 @@ public class GeneratePrefab : MonoBehaviour
     private void Start()
     {
 
-        var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
-        var player2 = PlayerInput.Instantiate(playerprefab2, controlScheme: "Player2", pairWithDevices: new InputDevice[] { Keyboard.current });
+        if (ButtonClicked()) // 만약 버튼이 클릭되었다면
+        {
+            // 플레이어 1 프리팹 생성
+            var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
+            player1.transform.position = new Vector3(5.5f, -4f, 0);
+        }
 
-        player1.transform.position = new Vector3(5.5f, -4f, 0);
-        player2.transform.position = new Vector3(-5.5f, -4f, 0);
-
+        else
+        {
+            var player2 = PlayerInput.Instantiate(playerprefab2, controlScheme: "Player2", pairWithDevices: new InputDevice[] { Keyboard.current });
+            player2.transform.position = new Vector3(-5.5f, -4f, 0);
+        }
 
         //var coin = GameObject.Instantiate(Coin);
         //coin.transform.position = new Vector3(-7.2f, 2, 0);
@@ -40,7 +46,7 @@ public class GeneratePrefab : MonoBehaviour
         SpawnEnhancedAttacks();
 
         var shield = GameObject.Instantiate(Shield);
-        shield.transform.position = new Vector3(0,2.54f,0);
+        shield.transform.position = new Vector3(0, 2.54f, 0);
 
     }
 
@@ -51,5 +57,10 @@ public class GeneratePrefab : MonoBehaviour
             Instantiate(EnhanceAttack[i % EnhanceAttack.Length], spawnPositions[i], Quaternion.identity);
 
         }
+    }
+
+    private bool ButtonClicked()
+    {
+        return PlayerPrefs.HasKey("SelectedSpaceShip");
     }
 }
