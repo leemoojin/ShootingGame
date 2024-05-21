@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     
     
     private Vector2 movementDirection = Vector2.zero;
-    private GameObject bomb;
+    private GameObject _bomb;
     
 
     [SerializeField] private GameObject bulletPrefab;
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform[] shootpoints4;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bombSpeed;
-    [SerializeField] private int bombDamage =10;
+    public int bombDamage =10;
    
 
     private bool wasPressed = false;
@@ -152,8 +152,8 @@ public class PlayerMovement : MonoBehaviour
     private void Bomb()
     {
         
-        bomb = Instantiate(bombPrefab, shootPoint.position, Quaternion.identity);
-        Rigidbody2D rigidbody = bomb.GetComponent<Rigidbody2D>();
+        _bomb = Instantiate(bombPrefab, shootPoint.position, Quaternion.identity);
+        Rigidbody2D rigidbody = _bomb.GetComponent<Rigidbody2D>();
         rigidbody.velocity = bombSpeed * Vector2.up;
 
         Invoke("CallBombExplode", 1f);
@@ -163,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         Debug.Log("CallbombExplode");
-        CallBombExplode(bomb);
+        CallBombExplode(_bomb);
         
     }
 
@@ -172,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
         Destroy(bomb);
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
         foreach (GameObject enemy in enemies)
         {
             Enemy enemyScript = enemy.GetComponent<Enemy>();
@@ -179,6 +180,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 enemyScript.DecreaseEnemyHP(bombDamage);
             }
+        }
+        foreach(GameObject ebullet in enemyBullets)
+        {
+            Destroy(ebullet);
         }
     }
 }
