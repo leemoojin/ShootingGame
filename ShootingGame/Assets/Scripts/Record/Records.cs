@@ -55,17 +55,17 @@ public class Records
             {
                 if (record.Score1P > singleRecords[i].Score1P)
                 {
-                    Debug.Log($"Records.cs - AddRecord() - 새로 들어온 값이 더 큼");                    
+                    Debug.Log($"Records.cs - AddRecord() - 새로 들어온 값이 더 큼 {record.Score1P} > {singleRecords[i].Score1P}, {i}");                    
                     singleRecords.Insert(i, record);
                     break;
                 }
                 else 
                 {
-                    Debug.Log($"Records.cs - AddRecord() - 새로 들어온 값이 작음");
-                    singleRecords.Add(record);
-                    break;
+                    Debug.Log($"Records.cs - AddRecord() - 새로 들어온 값이 작음 {record.Score1P} <= {singleRecords[i].Score1P}, {i}");                    
                 }
             }
+
+            if (singleRecords.Count == count) singleRecords.Add(record);
 
             if (singleRecords.Count == 11) singleRecords.RemoveAt(9);
         }
@@ -95,11 +95,11 @@ public class Records
                 }
                 else
                 {
-                    Debug.Log($"Records.cs - AddRecord() - 새로 들어온 값이 작음");
-                    multiRecords.Add(record);
-                    break;
+                    Debug.Log($"Records.cs - AddRecord() - 새로 들어온 값이 작음");                    
                 }
             }
+
+            if (multiRecords.Count == count) multiRecords.Add(record);
 
             if (multiRecords.Count == 11) multiRecords.RemoveAt(9);
 
