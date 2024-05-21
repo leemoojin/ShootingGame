@@ -5,19 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance;
-
     public Text TimeTxt;
     public Text ScoreTxt;
 
     private int score;
     private float time = 0.0f;
     private float scoreFromTime = 0.0f;
-
-    private void Awake()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

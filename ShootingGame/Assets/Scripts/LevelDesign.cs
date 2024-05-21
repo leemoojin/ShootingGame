@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class LevelDesign : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Enemy smallPlane;
+    public void MakePlane()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instantiate(smallPlane);
     }
 }
