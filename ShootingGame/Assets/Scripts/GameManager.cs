@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] EnhanceAttack;
     public Vector3[] spawnPositions;
 
+    public LevelDesign levelDesign;
+
     private void Awake()
     {
         if (Instance == null)
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     private void MakePlane()
     {
-        Instantiate(smallPlane);
+        levelDesign.MakePlane();
     }
 
     private void SpawnEnhancedAttacks()
