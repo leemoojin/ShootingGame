@@ -39,12 +39,18 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("MakePlane", 0f, 1f);
-
-        var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
-        var player2 = PlayerInput.Instantiate(playerprefab2, controlScheme: "Player2", pairWithDevices: new InputDevice[] { Keyboard.current });
-
-        player1.transform.position = new Vector3(1f, -4f, 0);
-        player2.transform.position = new Vector3(-1f, -4f, 0);
+        if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
+        {
+            // 플레이어 1 프리팹 생성
+            var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
+            player1.transform.position = new Vector3(0, -4f, 0);
+        }
+        else
+        {
+            // 플레이어 1 프리팹 생성 (조건 만족하지 않음)
+            var player2 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
+            player2.transform.position = new Vector3(-5.5f, -4f, 0);
+        }
 
         SpawnEnhancedAttacks();
     }
