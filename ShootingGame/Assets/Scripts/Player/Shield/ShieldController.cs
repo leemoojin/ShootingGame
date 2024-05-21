@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +8,6 @@ public class ShieldController : MonoBehaviour
     [SerializeField] private int maxShieldHP = 2;
     [SerializeField] private GameObject shield;
     public bool isShieldON = false;
-    private bool isInvincible = false;
 
     public void TakeDamage(int damageAmount)
     {
@@ -18,7 +16,6 @@ public class ShieldController : MonoBehaviour
             shield.SetActive(false);
             isShieldON = false;
         }
-        StartCoroutine(ShieldInvincible());
         currentShieldHP -= damageAmount;
 
         if(currentShieldHP < 0)
@@ -26,13 +23,6 @@ public class ShieldController : MonoBehaviour
             currentShieldHP = 0;
             isShieldON = false;
         }
-    }
-
-    IEnumerator ShieldInvincible()
-    {
-        isInvincible = true;
-        yield return new WaitForSeconds(0.3f);
-        isInvincible = false;
     }
 
     public void GenerateShield(int shieldHP)
