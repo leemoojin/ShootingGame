@@ -5,8 +5,11 @@ public class BombAmountController : MonoBehaviour
 {
     public int currentBombCount;
     [SerializeField] private int maximumBombCount;
-    
 
+    private void Start()
+    {
+        BombUI.instance.BombCheck(currentBombCount);
+    }
     public void UseBomb(int bombCount)
     {
         if(currentBombCount == 0)
@@ -19,6 +22,7 @@ public class BombAmountController : MonoBehaviour
         {
             currentBombCount = 0;
         }
+        BombUI.instance.BombCheck(currentBombCount);
     }
 
     public void AddBomb(int bombCount)
@@ -29,20 +33,21 @@ public class BombAmountController : MonoBehaviour
         }
 
         currentBombCount += bombCount;
+
         if(currentBombCount > maximumBombCount)
         {
             currentBombCount = maximumBombCount;
+
         }
+        BombUI.instance.BombCheck(currentBombCount);
     }
-    private void Start()
-    {
-       
-    }
+    
    
     // ÆøÅº °¹¼ö º¯°æ ¸Þ¼­µå
     public void SetBombCount(int bombCount)
     {
         currentBombCount = bombCount;
-        
+        BombUI.instance.BombCheck(currentBombCount);
+
     }
 }
