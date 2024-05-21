@@ -38,7 +38,7 @@ public class PlayerInputController : MovementController
             {
                 Debug.Log("폭탄 사용" + value.ToString());
                 CallBombEvent();
-                bombAmountController.UseBomb(1);
+                bombAmountController.UseBomb(bombUse);
                 isPressed_bomb = false;
             }
         }

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     EnhaceAttackController attackController;
     BombAmountController bombAmountController;
-    Bomb bombControl;
+    
     
     private Vector2 movementDirection = Vector2.zero;
     private GameObject bomb;
@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform[] shootpoints4;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bombSpeed;
+    [SerializeField] private int bombDamage =10;
    
 
     private bool wasPressed = false;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         movementRigidbody = GetComponent<Rigidbody2D>();      
         attackController = GetComponent<EnhaceAttackController>();
         bombAmountController = GetComponent<BombAmountController>();
-        bombControl = GetComponent<Bomb>();
+        
     }
 
     private void Start()
@@ -162,9 +163,22 @@ public class PlayerMovement : MonoBehaviour
     {
 
         Debug.Log("CallbombExplode");
-        bombControl.BombExplode(bomb);
+        CallBombExplode(bomb);
         
     }
-  
 
+    public void CallBombExplode(GameObject bomb)
+    {
+        Destroy(bomb);
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            Enemy enemyScript = enemy.GetComponent<Enemy>();
+            if (enemyScript != null)
+            {
+                enemyScript.DecreaseEnemyHP(bombDamage);
+            }
+        }
+    }
 }

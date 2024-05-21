@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
             player2.transform.position = new Vector3(-5.5f, -4f, 0);
         }
 
-        SpawnEnhancedAttacks();
+        
     }
 
     // Update is called once per frame
@@ -66,12 +66,4 @@ public class GameManager : MonoBehaviour
         Instantiate(smallPlane);
     }
 
-    private void SpawnEnhancedAttacks()
-    {
-        for (int i = 0; i < spawnPositions.Length; i++)
-        {
-            Instantiate(EnhanceAttack[i % EnhanceAttack.Length], spawnPositions[i], Quaternion.identity);
-
-        }
-    }
 }
