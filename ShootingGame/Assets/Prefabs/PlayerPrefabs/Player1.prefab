@@ -152,7 +152,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4737374566679142572}
@@ -198,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 374db6df0897a164ebdcbf68765f9316, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -227,7 +227,6 @@ GameObject:
   - component: {fileID: -3008964355609160831}
   - component: {fileID: 8816988608568402748}
   - component: {fileID: 1372838568017736923}
-  - component: {fileID: 8520572579391667453}
   m_Layer: 13
   m_Name: Player1
   m_TagString: Player1
@@ -350,6 +349,8 @@ MonoBehaviour:
   - {fileID: 3750732283060548284}
   bulletSpeed: 10
   bombSpeed: 5
+  bombDamage: 10
+  isBombExplode: 0
 --- !u!50 &9020473921145740679
 Rigidbody2D:
   serializedVersion: 4
@@ -442,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 3
   maximumHealth: 3
+  isInvincible: 0
   spriteRenderer: {fileID: 2833584073576578233}
 --- !u!114 &-3008964355609160831
 MonoBehaviour:
@@ -455,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46923289a13854d4eb7bf7675b7393df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBombCount: 0
+  currentBombCount: 3
   maximumBombCount: 3
 --- !u!114 &8816988608568402748
 MonoBehaviour:
@@ -487,19 +489,7 @@ MonoBehaviour:
   currentShieldHP: 0
   maxShieldHP: 2
   shield: {fileID: 4288543515544623193}
---- !u!114 &8520572579391667453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091477771856809546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def4a19edf8a5aa45b3e400d0a062d75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombDamage: 10
+  isShieldON: 0
 --- !u!1 &2515484854644647638
 GameObject:
   m_ObjectHideFlags: 0
