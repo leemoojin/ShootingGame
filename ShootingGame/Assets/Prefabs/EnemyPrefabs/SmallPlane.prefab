@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5102317820521740842}
   m_Layer: 14
   m_Name: SmallPlane
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,10 +50,10 @@ MonoBehaviour:
   bullet: {fileID: 1653901452751035832, guid: 94363a241f990d348a921f1c85a171a3, type: 3}
   player1: {fileID: 2091477771856809546, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
   player2: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-  type: 0
-  hp: 0
-  speed: 0
-  fireRate: 0
+  HP: {fileID: 3389839969392751863, guid: a7c12f4905e4f4040922d9562398ef1b, type: 3}
+  EnhanceAttack: {fileID: 4642183405077071220, guid: 625e866ba2c211941bfe7b2772948210, type: 3}
+  Bomb: {fileID: 509354000994885084, guid: ba32df73f2c020f4db03bf8e24b2fd89, type: 3}
+  Shield: {fileID: 3621424074376780518, guid: d93c8f29ec7621543ba0306b9443f995, type: 3}
 --- !u!61 &2678272897793888466
 BoxCollider2D:
   m_ObjectHideFlags: 0

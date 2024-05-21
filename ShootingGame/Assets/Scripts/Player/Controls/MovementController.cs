@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour
 
     public void CallMoveEvent(Vector2 direction)
     {
-        OnMoveEvent(direction);
+        OnMoveEvent.Invoke(direction);
     }
 
    public void CallFireEvent()

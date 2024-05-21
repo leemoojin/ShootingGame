@@ -935,7 +935,6 @@ GameObject:
   - component: {fileID: -4183113293737495833}
   - component: {fileID: 2319415455429110226}
   - component: {fileID: 5052657271050724578}
-  - component: {fileID: -7513438154797665211}
   m_Layer: 13
   m_Name: Player2
   m_TagString: Player2
@@ -1032,6 +1031,7 @@ MonoBehaviour:
   - {fileID: 2289269524614100182}
   bulletSpeed: 10
   bombSpeed: 5
+  bombDamage: 10
 --- !u!114 &-2054778856575394084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46923289a13854d4eb7bf7675b7393df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBombCount: 0
+  currentBombCount: 1
   maximumBombCount: 3
 --- !u!114 &2319415455429110226
 MonoBehaviour:
@@ -1184,19 +1184,6 @@ MonoBehaviour:
   maxShieldHP: 2
   shield: {fileID: 6124970932486770014}
   isShieldON: 0
---- !u!114 &-7513438154797665211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6596095126878471350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def4a19edf8a5aa45b3e400d0a062d75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombDamage: 10
 --- !u!1 &7792393267251436466
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MakePlane", 0f, 1f);
+        InvokeRepeating("MakePlane", 0f, 1f);   
         if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {
             // 플레이어 1 프리팹 생성
             var player1 = PlayerInput.Instantiate(playerprefab1, controlScheme: "Player1", pairWithDevices: new InputDevice[] { Keyboard.current });
-            player1.transform.position = new Vector3(0, -4f, 0);
+            player1.transform.position = new Vector3(0, -4.4f, 0);
         }
         else
         {
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
             player2.transform.position = new Vector3(-5.5f, -4f, 0);
         }
 
-        SpawnEnhancedAttacks();
+        
     }
 
     // Update is called once per frame
@@ -68,12 +68,4 @@ public class GameManager : MonoBehaviour
         levelDesign.MakePlane();
     }
 
-    private void SpawnEnhancedAttacks()
-    {
-        for (int i = 0; i < spawnPositions.Length; i++)
-        {
-            Instantiate(EnhanceAttack[i % EnhanceAttack.Length], spawnPositions[i], Quaternion.identity);
-
-        }
-    }
 }
