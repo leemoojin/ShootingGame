@@ -163,6 +163,7 @@ public class Enemy : MonoBehaviour
                 SpawnRandomItem();
             }
             scoreManager.AddScore(score);
+            Debug.Log("적이 처치되었습니다. 점수를 추가합니다.");
             Destroy(gameObject);
         }
 

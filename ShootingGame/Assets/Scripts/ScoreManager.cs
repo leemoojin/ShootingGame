@@ -25,10 +25,11 @@ public class ScoreManager : MonoBehaviour
     {
         score += (int)value;
         UpdateScoreText(); // 점수 업데이트
+        Debug.Log($"점수 추가: {value}. 현재 점수: {score}");
     }
 
     private void UpdateScoreText()
     {
-        ScoreTxt.text = ((int)(score + scoreFromTime)).ToString(); // 현재 점수 + 시간에 따른 점수 업데이트
+        ScoreTxt.text = ((int)(score + scoreFromTime)).ToString();
     }
 }
