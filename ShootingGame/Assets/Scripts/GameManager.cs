@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour
     int score;
 
     float time = 0.0f;
+
+    public HealthController player1Health;
+    public HealthController player2Health;
 
     private void Awake()
     {
@@ -60,6 +64,14 @@ public class GameManager : MonoBehaviour
     {
         time += Time.deltaTime;
         TimeTxt.text = time.ToString("N2");
+
+        //TODO : 수정해야함
+       if(player1Health.currentHealth <=0 && player2Health.currentHealth <= 0)
+        {
+            Debug.Log("게임오버");
+            SceneManager.LoadScene("GameoverScene");
+
+        }
     }
 
     public void AddScore(float value)

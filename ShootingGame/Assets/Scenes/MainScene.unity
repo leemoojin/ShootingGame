@@ -555,6 +555,8 @@ MonoBehaviour:
   spawnPositions: []
   TimeTxt: {fileID: 820226833}
   ScoreTxt: {fileID: 2079851093}
+  player1Health: {fileID: 4945043804787316018, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
+  player2Health: {fileID: 8162225197567103963, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
 --- !u!4 &596782970
 Transform:
   m_ObjectHideFlags: 0

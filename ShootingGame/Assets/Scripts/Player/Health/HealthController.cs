@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class HealthController : MonoBehaviour
 {
     [SerializeField]
-    private int currentHealth;
+    public int currentHealth;
     [SerializeField]
     private int maximumHealth;
     EnhaceAttackController attackController;
@@ -24,8 +24,9 @@ public class HealthController : MonoBehaviour
     {
         if(currentHealth == 0)
         {
-            Debug.Log("게임 오버");
-            SceneManager.LoadScene("GameoverScene");
+            Debug.Log(gameObject + "사망");
+            Destroy(gameObject);
+            //SceneManager.LoadScene("GameoverScene");
         }
     }
 
