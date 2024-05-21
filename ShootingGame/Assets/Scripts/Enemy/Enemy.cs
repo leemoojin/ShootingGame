@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
 
     
 
+    
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -163,6 +165,7 @@ public class Enemy : MonoBehaviour
             }
            //ScoreManager.Instance.AddScore(score);
             Destroy(gameObject);
+           
         }
 
     }

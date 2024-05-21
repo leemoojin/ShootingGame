@@ -54,6 +54,7 @@ MonoBehaviour:
   EnhanceAttack: {fileID: 4642183405077071220, guid: 625e866ba2c211941bfe7b2772948210, type: 3}
   Bomb: {fileID: 509354000994885084, guid: ba32df73f2c020f4db03bf8e24b2fd89, type: 3}
   Shield: {fileID: 3621424074376780518, guid: d93c8f29ec7621543ba0306b9443f995, type: 3}
+  deadFX: {fileID: 7268539386040984157, guid: 4b73db242d1d7304da7652c97a300093, type: 3}
 --- !u!61 &2678272897793888466
 BoxCollider2D:
   m_ObjectHideFlags: 0
