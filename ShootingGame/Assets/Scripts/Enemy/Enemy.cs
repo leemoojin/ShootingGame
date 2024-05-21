@@ -161,7 +161,7 @@ public class Enemy : MonoBehaviour
             {
                 SpawnRandomItem();
             }
-            GameManager.Instance.AddScore(score);
+            ScoreManager.Instance.AddScore(score);
             Destroy(gameObject);
         }
 
