@@ -15,10 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] EnhanceAttack;
     
 
-    public LevelDesign levelDesignPrefab;
-
-    private LevelDesign levelDesign;
-
     private void Awake()
     {
         if (Instance == null)
@@ -35,8 +31,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelDesign = Instantiate(levelDesignPrefab);
-        levelDesign.transform.parent = transform;
 
         if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {
