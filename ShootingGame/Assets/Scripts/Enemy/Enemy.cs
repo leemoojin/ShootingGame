@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
 
-    int type;
+    public int type;
     int hp;
     float speed;
     float fireRate;
@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour
     }
 
     //비행기 생성 정보
-    private void setEnemyAttributes()
+    public void setEnemyAttributes()
     {
         switch (type)
         {
@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
             case 2:
                 hp = 5;
                 speed = 0.2f;
-                fireRate = 1.5f;
+                fireRate = 2f;
                 score = 15;
                 break;
             //자폭기
