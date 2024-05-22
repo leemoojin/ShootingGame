@@ -108,7 +108,7 @@ public class Enemy : MonoBehaviour
             //대형 비행기
             case 2:
                 hp = 5;
-                speed = 0.2f;
+                speed = 0.7f;
                 fireRate = 2f;
                 score = 15;
                 break;
@@ -121,13 +121,13 @@ public class Enemy : MonoBehaviour
             //운석
             case 4:
                 hp = 10;
-                speed = 0.1f;
+                speed = 0.5f;
                 score = 20;
                 break;
             //메테오
             case 5:
                 hp = 100;
-                speed = 1.5f;
+                speed = 2.5f;
                 score = 20;
                 break;
 

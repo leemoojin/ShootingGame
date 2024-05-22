@@ -14,20 +14,20 @@ public class EnemyBullet : MonoBehaviour
         switch (type)
         {
             case 0:
-                shootspeed = 0.008f;
+                shootspeed = 3f;
                 break;
             case 1:
-                shootspeed = 0.01f;
+                shootspeed = 5f;
                 break;
             case 2:
-                shootspeed = 0.005f;
-                transform.localScale = new Vector2(1f, 1f);
+                shootspeed = 2f;
+                transform.localScale = new Vector2(3f, 3f);
                 break;
         }
     }
     void Update()
     {
-        transform.position += Vector3.down * shootspeed;
+        transform.position += Vector3.down * shootspeed * Time.deltaTime;
 
         if (transform.position.y < -6)
         {
