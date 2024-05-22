@@ -8,9 +8,13 @@ public class IntroController : MonoBehaviour
 {
     public Text pressAnyKeyText;
     [SerializeField] private float blinkInterval = 0.5f;
+
+    private string currentSceneName;
     void Start()
     {
         StartCoroutine(BlinkText());
+        currentSceneName = SceneManager.GetActiveScene().name;
+        Debug.Log($"IntroController - {currentSceneName}");
     }
 
     void Update()
@@ -20,6 +24,8 @@ public class IntroController : MonoBehaviour
         {
             
             SceneManager.LoadScene("MenuScene");
+
+       
         }
     }
     IEnumerator BlinkText()

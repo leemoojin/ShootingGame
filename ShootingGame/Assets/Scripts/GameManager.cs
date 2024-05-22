@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] EnhanceAttack;
     public Vector3[] spawnPositions;
 
+    public bool isPlay = true;
+
     private void Awake()
     {
         if (Instance == null)
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         InvokeRepeating("MakePlane", 0f, 1f);   
         if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {
@@ -58,12 +60,22 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log($"게임 매니저 isPlay {isPlay}");
+        
+
 
     }
 
     private void MakePlane()
     {
         Instantiate(smallPlane);
+    }
+
+    public void GameOver()
+    {
+        isPlay = false;
+        Destroy(gameObject);
+        SceneManager.LoadScene("GameoverScene");        
     }
 
 }

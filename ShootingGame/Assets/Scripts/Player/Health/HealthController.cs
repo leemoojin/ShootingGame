@@ -23,9 +23,11 @@ public class HealthController : MonoBehaviour
     private void Update()
     {
         if(currentHealth == 0)
-        {
+        {   
+            //GameManager.Instance.isPlay = false;
             Debug.Log(gameObject + "»ç¸Á");
-            Destroy(gameObject);
+            GameManager.Instance.GameOver();
+            //Destroy(gameObject);
             //SceneManager.LoadScene("GameoverScene");
         }
     }
@@ -53,8 +55,8 @@ public class HealthController : MonoBehaviour
         {
             currentHealth -= damageAmount;
             attackController.reduceBulletLine(damageAmount);
-            isInvincible = true;
-            StartCoroutine("InvincibleTime");
+            //isInvincible = true;
+            //StartCoroutine("InvincibleTime");
             
            
         }

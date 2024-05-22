@@ -23,6 +23,7 @@ public class PlayerInputController : MovementController
         
         if(isPressed)
         {
+            EffectsSoundManager._instance.PlayAttackSound();
             CallFireEvent();
         }
     }

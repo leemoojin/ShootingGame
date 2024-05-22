@@ -48,5 +48,6 @@ public class SpaceShipBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         PlayerPrefs.Save();
         // 메인 씬으로 전환
         SceneManager.LoadScene("MainScene");
+        BGMSoundManager._instance.ChangeBGM(2);
     }
 }
