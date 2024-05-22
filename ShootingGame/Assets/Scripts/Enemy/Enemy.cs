@@ -20,15 +20,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject Shield;
 
     public ScoreManager scoreManager;
-
-    
-
-    
+    EnemyAnimController enemyAnim;
 
     // Start is called before the first frame update
     public void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
+        enemyAnim = GetComponent<EnemyAnimController>();
 
         player1 = GameObject.FindWithTag("Player1");
         player2 = GameObject.FindWithTag("Player2");
@@ -95,7 +93,7 @@ public class Enemy : MonoBehaviour
             //소형 비행기
             case 0:
                 hp = 1;
-                speed = 0.3f;
+                speed = 1f;
                 fireRate = 2f;
                 fireRate = 1;
                 score = 5;
@@ -103,7 +101,7 @@ public class Enemy : MonoBehaviour
             //중형 비행기
             case 1:
                 hp = 2;
-                speed = 0.5f;
+                speed = 1.2f;
                 fireRate = 0.5f;
                 score = 10;
                 break;
@@ -129,7 +127,7 @@ public class Enemy : MonoBehaviour
             //메테오
             case 5:
                 hp = 100;
-                speed = 0.8f;
+                speed = 1.5f;
                 score = 20;
                 break;
 
@@ -160,6 +158,7 @@ public class Enemy : MonoBehaviour
         
         if (hp <= 0)
         {
+            //enemyAnim.DestroyAnimation();
             if(Random.Range(0,1f) <= 0.3f)
             {
                 SpawnRandomItem();

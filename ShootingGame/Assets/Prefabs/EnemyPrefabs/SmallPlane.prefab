@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7688099651422237488}
   - component: {fileID: 2678272897793888466}
   - component: {fileID: 5102317820521740842}
+  - component: {fileID: 3289272721224920383}
   m_Layer: 14
   m_Name: SmallPlane
   m_TagString: Enemy
@@ -50,11 +51,12 @@ MonoBehaviour:
   bullet: {fileID: 1653901452751035832, guid: 94363a241f990d348a921f1c85a171a3, type: 3}
   player1: {fileID: 2091477771856809546, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
   player2: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
+  type: 0
   HP: {fileID: 3389839969392751863, guid: a7c12f4905e4f4040922d9562398ef1b, type: 3}
   EnhanceAttack: {fileID: 4642183405077071220, guid: 625e866ba2c211941bfe7b2772948210, type: 3}
   Bomb: {fileID: 509354000994885084, guid: ba32df73f2c020f4db03bf8e24b2fd89, type: 3}
   Shield: {fileID: 3621424074376780518, guid: d93c8f29ec7621543ba0306b9443f995, type: 3}
-  deadFX: {fileID: 7268539386040984157, guid: 4b73db242d1d7304da7652c97a300093, type: 3}
+  scoreManager: {fileID: 0}
 --- !u!61 &2678272897793888466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,6 +129,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3289272721224920383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495411813384434539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd6e4394bbc1a444a3bd926dc6e20b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8418499287156044587
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5109426660406408612}
   - component: {fileID: 6613746929222555251}
+  - component: {fileID: 8565377298866172747}
   m_Layer: 14
   m_Name: Square
   m_TagString: Untagged
@@ -211,3 +226,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8565377298866172747
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418499287156044587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de1fe9ba865da694ca4509b575c29f6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
