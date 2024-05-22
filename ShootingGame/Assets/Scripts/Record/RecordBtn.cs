@@ -24,6 +24,15 @@ public class RecordBtn : MonoBehaviour
     public void BackBtn()
     {
         Debug.Log("백 클릭");
+        RecordManager.IsMulti = false;
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public void MenuBtn()
+    {
+        Debug.Log("메뉴 클릭");
+        RecordManager.IsMulti = false;
+        BGMSoundManager._instance.ChangeBGM(1);
         SceneManager.LoadScene("MenuScene");
     }
 }
