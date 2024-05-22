@@ -590,17 +590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb72e408084269488712a15b7e03cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallPlane: {fileID: 7688099651422237488, guid: e3af9bd55b09e5046bb082de90dc2a7f, type: 3}
-  middlePlane: {fileID: 6324357422959440175, guid: 0d087b6975fb2714ebe511a3316d2564, type: 3}
-  largePlane: {fileID: 5543657859176903560, guid: 5eb50a05511cb0e49969c68fb4e781bc, type: 3}
-  bombPlane: {fileID: 7485673842378343594, guid: cc7fd5fe754633b4b8f2e06105ab44b1, type: 3}
-  stone: {fileID: 7761493491276741379, guid: 2e6079044ea335f439500c0679fbd11b, type: 3}
-  meteor: {fileID: 6366227201128265699, guid: ede8ae1d96dce0e49a8674ab00f66866, type: 3}
   playerprefab1: {fileID: 2091477771856809546, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
   playerprefab2: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
   EnhanceAttack: []
   spawnPositions: []
-  levelDesign: {fileID: 0}
 --- !u!4 &596782970
 Transform:
   m_ObjectHideFlags: 0
@@ -629,6 +622,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smallPlane: {fileID: 7688099651422237488, guid: e3af9bd55b09e5046bb082de90dc2a7f, type: 3}
+  middlePlane: {fileID: 0}
+  largePlane: {fileID: 0}
+  bombPlane: {fileID: 0}
+  stone: {fileID: 0}
+  meteor: {fileID: 0}
 --- !u!1 &688863164
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,63 +970,6 @@ MonoBehaviour:
   - {fileID: 1187232592}
   - {fileID: 1879218606}
   - {fileID: 1499535818}
---- !u!1001 &1158823318
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230201818489013435, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596095126878471350, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
-      propertyPath: m_Name
-      value: Player2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
 --- !u!1 &1187232592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,8 +1089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5823426a8c769ae479f950427177b52b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeTxt: {fileID: 820226833}
-  ScoreTxt: {fileID: 2079851093}
+  timeTxt: {fileID: 820226833}
+  scoreTxt: {fileID: 2079851093}
 --- !u!1 &1393175346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +1800,5 @@ SceneRoots:
   - {fileID: 791708933}
   - {fileID: 190263929}
   - {fileID: 1274424835}
-  - {fileID: 1158823318}
   - {fileID: 1018587244}
   - {fileID: 1753140686}

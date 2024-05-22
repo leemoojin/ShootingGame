@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerprefab2;
 
     [SerializeField] private GameObject[] EnhanceAttack;
-    public Vector3[] spawnPositions;
+    
 
     private LevelDesign levelDesign;
 
