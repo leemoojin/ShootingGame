@@ -11,6 +11,17 @@ public class ScoreManager : MonoBehaviour
     private int score;
     private float timeElapsed = 0.0f;
 
+
+    public LevelDesign levelDesignPrefab;
+
+    private LevelDesign levelDesign;
+
+    private void Start()
+    {
+        levelDesign = Instantiate(levelDesignPrefab);
+        levelDesign.transform.parent = transform;
+    }
+
     // Update is called once per frame
     void Update()
     {
