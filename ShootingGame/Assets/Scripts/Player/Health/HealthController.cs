@@ -64,6 +64,7 @@ public class HealthController : MonoBehaviour
             
         }
         Debug.Log("현재 체력" + currentHealth);
+        HpUI.instance.HpCheck(currentHealth);
     }
 
     public void AddHealth(int amountToAdd)
@@ -78,6 +79,7 @@ public class HealthController : MonoBehaviour
         {
             currentHealth = maximumHealth;
         }
+        HpUI.instance.HpCheck(currentHealth);
     }
 
     IEnumerator InvincibleTime()
