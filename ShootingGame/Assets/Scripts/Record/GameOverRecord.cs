@@ -37,8 +37,8 @@ public class GameOverRecord : MonoBehaviour
         //_score1P = 500;
         //_playTime1P = "00.20.35";
 
-        string time = ScoreManager.Instance.time.ToString("N2");
-        GetRecord(ScoreManager.Instance.score, time);
+        //string time = ScoreManager.Instance.time.ToString("N2");
+        //GetRecord(ScoreManager.Instance.score, time);
 
         if (tempRecord == null)
         {
