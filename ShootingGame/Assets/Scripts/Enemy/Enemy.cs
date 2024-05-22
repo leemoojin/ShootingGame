@@ -147,9 +147,12 @@ public class Enemy : MonoBehaviour
     //ÃÑ¾Ë »ý¼º
     private void Shoot()
     {
-        GameObject BulletInstance = Instantiate(bullet, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-        EnemyBullet bulletScript = BulletInstance.GetComponent<EnemyBullet>();
-        bulletScript.SetBulletType(type);
+        if (type < 3)
+        {
+            GameObject BulletInstance = Instantiate(bullet, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            EnemyBullet bulletScript = BulletInstance.GetComponent<EnemyBullet>();
+            bulletScript.SetBulletType(type);
+        }
     }
 
     public void DecreaseEnemyHP(int damage)
