@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bombSpeed;
     public int bombDamage =10;
+    
    
 
     private bool wasPressed = false;
@@ -168,7 +169,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void CallBombExplode(GameObject bomb)
-    {
+    {        
+        Animator anim = bomb.GetComponentInChildren<Animator>();
+        anim.SetTrigger("Boom");
         Destroy(bomb);
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");

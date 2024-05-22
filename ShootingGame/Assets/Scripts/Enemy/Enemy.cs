@@ -20,15 +20,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject Shield;
 
     public ScoreManager scoreManager;
-
-    
-
-    
+    EnemyAnimController enemyAnim;
 
     // Start is called before the first frame update
     public void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
+        enemyAnim = GetComponent<EnemyAnimController>();
 
         player1 = GameObject.FindWithTag("Player1");
         player2 = GameObject.FindWithTag("Player2");
@@ -160,6 +158,7 @@ public class Enemy : MonoBehaviour
         
         if (hp <= 0)
         {
+            enemyAnim.DestroyAnimation();
             if(Random.Range(0,1f) <= 0.3f)
             {
                 SpawnRandomItem();
