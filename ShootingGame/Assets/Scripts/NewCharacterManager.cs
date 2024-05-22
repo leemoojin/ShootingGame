@@ -12,6 +12,18 @@ public class NewCharacterManager : MonoBehaviour
 
     private int selectedOption = 0;
 
+    public string spriteName; 
+
+    public static NewCharacterManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }   
+
     void Start()
     {
         if (!PlayerPrefs.HasKey("selectedOption"))
@@ -23,6 +35,8 @@ public class NewCharacterManager : MonoBehaviour
             Load();
         }
         UpdateCharacter(selectedOption);
+        spriteName = artworkSprite.sprite.name;
+
     }
 
     public void NextOption()
@@ -36,6 +50,7 @@ public class NewCharacterManager : MonoBehaviour
 
         UpdateCharacter(selectedOption);
         Save();
+        spriteName = artworkSprite.sprite.name;
     }
     public void BackOption()
     {
@@ -47,6 +62,7 @@ public class NewCharacterManager : MonoBehaviour
         }
         UpdateCharacter(selectedOption);
         Save();
+        spriteName = artworkSprite.sprite.name;
     }
     private void UpdateCharacter(int selectedOption)
     {

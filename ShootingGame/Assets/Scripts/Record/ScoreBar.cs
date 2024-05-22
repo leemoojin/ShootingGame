@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScoreBar : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class ScoreBar : MonoBehaviour
     [SerializeField] private GameObject _Image2P;
     [SerializeField] private TMP_Text _point2P;
     [SerializeField] private TMP_Text _playTime2P;
+
+    public Sprite[] playerImages;
+
 
     // _record 값을 외부에서 설정하는 메서드
     public void SetRecord(Record record)
@@ -28,8 +32,7 @@ public class ScoreBar : MonoBehaviour
 
             int rank = Records.instance.ObjectToIndex(record) + 1;
             _rank1P.text = Convert.ToString($"{rank}");
-            //이미지 설정
-            //_Image1P
+            _Image1P.GetComponent<Image>().sprite = playerImages[record.PlayerImage];
             _point1P.text = Convert.ToString(record.Score1P);
             _playTime1P.text = record.PlayTime1P;
 

@@ -11,10 +11,23 @@ public class ScoreManager : MonoBehaviour
     private int score;
     private float timeElapsed = 0.0f;
 
+    public int totalScore;
+    public string playTime;
+
 
     public LevelDesign levelDesignPrefab;
 
     private LevelDesign levelDesign;
+
+    public static ScoreManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -26,6 +39,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         timeElapsed += Time.deltaTime;  // 경과 시간 누적
+        playTime = timeElapsed.ToString("N2");
         timeTxt.text = timeElapsed.ToString("N2");
         UpdateScoreText();
     }
@@ -39,6 +53,7 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
+        totalScore = (int)(score + timeElapsed);
         scoreTxt.text = ((int)(score + timeElapsed)).ToString();  // 총 점수 계산
     }
 

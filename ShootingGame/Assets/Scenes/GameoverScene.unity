@@ -1677,6 +1677,7 @@ MonoBehaviour:
   _Image2P: {fileID: 6335775854060310336}
   _point2P: {fileID: 2800089027981540597}
   _playTime2P: {fileID: 2290724847815209498}
+  playerImages: []
 --- !u!114 &2290724847815209498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3711,6 +3712,9 @@ MonoBehaviour:
   _Image2P: {fileID: 0}
   _point2P: {fileID: 0}
   _playTime2P: {fileID: 0}
+  playerImages:
+  - {fileID: 21300000, guid: 374db6df0897a164ebdcbf68765f9316, type: 3}
+  - {fileID: 21300000, guid: f91b26e1366cd4f4eb53c61726f37443, type: 3}
 --- !u!114 &8320772682354584121
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class StartBtn : MonoBehaviour
 {
     public void Play()
     {
+        BGMSoundManager._instance.ChangeBGM(2);
         SceneManager.LoadScene("MainScene");
     }
 }

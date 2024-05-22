@@ -785,10 +785,12 @@ MonoBehaviour:
   _Image1P: {fileID: 2012526073548416528}
   _point1P: {fileID: 2579759314919296499}
   _playTime1P: {fileID: 1116904551410004365}
-  _rank2P: {fileID: 0}
   _Image2P: {fileID: 0}
   _point2P: {fileID: 0}
   _playTime2P: {fileID: 0}
+  playerImages:
+  - {fileID: 21300000, guid: 374db6df0897a164ebdcbf68765f9316, type: 3}
+  - {fileID: 21300000, guid: f91b26e1366cd4f4eb53c61726f37443, type: 3}
 --- !u!1 &8674814107932547708
 GameObject:
   m_ObjectHideFlags: 0

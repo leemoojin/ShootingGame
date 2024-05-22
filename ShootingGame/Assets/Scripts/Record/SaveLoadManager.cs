@@ -122,8 +122,7 @@ public class SaveLoadManager : MonoBehaviour
 
             if (_loadData.Count > 0)
             {
-                Records.instance.singleRecords = _loadData;
-                Debug.Log($"SaveLoadManager.cs - OnLoad() - ½Ì±Û {_loadData.Count}");
+                Records.instance.singleRecords = _loadData;                
 
             }
 

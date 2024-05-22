@@ -25,8 +25,7 @@ public class HealthController : MonoBehaviour
         if(currentHealth == 0)
         {
             Debug.Log(gameObject + "»ç¸Á");
-            Destroy(gameObject);
-            //SceneManager.LoadScene("GameoverScene");
+            Destroy(gameObject);            
         }
     }
 
