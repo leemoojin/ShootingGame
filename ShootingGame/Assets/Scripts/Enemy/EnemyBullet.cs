@@ -14,14 +14,14 @@ public class EnemyBullet : MonoBehaviour
         switch (type)
         {
             case 0:
-                shootspeed = 1.5f;
+                shootspeed = 3f;
                 break;
             case 1:
-                shootspeed = 2f;
+                shootspeed = 5f;
                 break;
             case 2:
-                shootspeed = 1f;
-                transform.localScale = new Vector2(1f, 1f);
+                shootspeed = 2f;
+                transform.localScale = new Vector2(3f, 3f);
                 break;
         }
     }
