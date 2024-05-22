@@ -4,7 +4,10 @@ using TMPro;
 using UnityEngine;
 
 public class Board : MonoBehaviour
-{   
+{
+    public static bool IsMulti { get; set; }
+    private bool _isMulti = false;
+
     //橇府崎 积己
     public GameObject singleScoreBar;
     public GameObject multiScoreBar;
@@ -21,12 +24,11 @@ public class Board : MonoBehaviour
 
     }
 
-
     public void ShowScoreBar()
     {
         float maxHeight = 0;
 
-        if (!RecordManager.IsMulti)
+        if (!IsMulti)
         {           
 
             //10困鳖瘤 积己

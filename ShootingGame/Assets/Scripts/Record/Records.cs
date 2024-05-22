@@ -4,31 +4,14 @@ using UnityEngine;
 
 public class Records
 {
-    //레코즈의 리스트안의 기록들은 PlayerPrefs사용해서 저장할 계획
     public List<Record> singleRecords = new List<Record>();
     public List<Record> multiRecords = new List<Record>();
 
     public static Records instance = new Records();
-    //public static int tempScore;
-    //public static string tempTime;
 
     public Records()
     {
-        if (instance == null) instance = this;
-
-        //임시로 Record 클래스를 여기서 객체화해서 추가 
-        //Record record1 = new Record(300, "00.30.45");
-        //Record record2 = new Record(400, "00.40.45");
-        //Record record3 = new Record(500, "00.50.45");
-        //AddRecord(record1);
-        //AddRecord(record2);
-        //AddRecord(record3);
-
-        ////
-        //AddRecord(new Record(100, "00.10.10", 100, "00.10.10"));
-        //AddRecord(new Record(200, "00.20.10", 200, "00.20.10"));
-        //AddRecord(new Record(300, "00.30.10", 300, "00.30.10"));
-
+        if (instance == null) instance = this;  
 
     }
 

@@ -17,7 +17,7 @@ public class HpUI : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void HpCheck(int hpCount)

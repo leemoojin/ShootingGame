@@ -9,8 +9,6 @@ public class GameOverRecord : MonoBehaviour
 {
     public static GameOverRecord _instance;
 
-    //게임 오버 후 전달받을 데이터
-    //private bool _isMulti;
     private int _score1P;
     private string _playTime1P;
     private int _score2P;
@@ -36,10 +34,7 @@ public class GameOverRecord : MonoBehaviour
 
     // Start is called before the first frame update
     private void Start()
-    {
-        //currentSceneName = SceneManager.GetActiveScene().name;
-        //if (currentSceneName != "GameoverScene") return;
-
+    {       
 
         if (NewCharacterManager.Instance.spriteName == "PixelArtSpaceShipOne")
         {
@@ -48,17 +43,12 @@ public class GameOverRecord : MonoBehaviour
         else
         {
             GetRecord(ScoreManager.Instance.totalScore, ScoreManager.Instance.playTime, 1);
-        }
-
-        //string time = ScoreManager.Instance.time.ToString("N2");
-        //GetRecord(ScoreManager.Instance.score, time);
+        }     
 
         if (tempRecord == null)
         {
             Debug.Log("게임종료 - 점수획득 실패");
         }
-
-
 
         if (!tempRecord.IsMulti)
         {
