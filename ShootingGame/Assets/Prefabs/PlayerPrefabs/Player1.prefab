@@ -359,7 +359,7 @@ MonoBehaviour:
   currentHealth: 3
   maximumHealth: 3
   isInvincible: 0
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 7693422551942104245}
 --- !u!114 &-3008964355609160831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,6 +1039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61832119018922063}
   - component: {fileID: 7693422551942104245}
+  - component: {fileID: 7119305534778842202}
   m_Layer: 0
   m_Name: MainSprite
   m_TagString: Untagged
@@ -1113,6 +1114,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7119305534778842202
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211388036331626119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b32a656f4c59db248a27b6960152ca0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7830464435478441030
 GameObject:
   m_ObjectHideFlags: 0
