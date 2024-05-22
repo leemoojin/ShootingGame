@@ -14,7 +14,7 @@ public class NewCharacterManager : MonoBehaviour
 
     void Start()
     {
-        if(!PlayerPrefs.HasKey("selectedOption"))
+        if (!PlayerPrefs.HasKey("selectedOption"))
         {
             selectedOption = 0;
         }
@@ -63,9 +63,5 @@ public class NewCharacterManager : MonoBehaviour
     private void Save()
     {
         PlayerPrefs.SetInt("selectedOption", selectedOption);
-    }
-    public void Play()
-    {
-        SceneManager.LoadScene("MainScene");
     }
 }
