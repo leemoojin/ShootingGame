@@ -15,6 +15,7 @@ public class LevelDesign : MonoBehaviour
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
+        InvokeRepeating("MakePlane", 0f, 2f);
     }
 
     public void MakePlane()
@@ -39,10 +40,6 @@ public class LevelDesign : MonoBehaviour
         if (scoreManager != null && scoreManager.TimeElapsed > 50)
         {
             Instantiate(meteor);
-        }
-        if (scoreManager != null && scoreManager.TimeElapsed > 60)
-        {
-            Instantiate(stone);
         }
     }
 }
