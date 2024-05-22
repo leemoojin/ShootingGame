@@ -70,8 +70,7 @@ public class ScoreBar : MonoBehaviour
             Debug.Log($"ScoreBar.cs - SetGameOverRecord() - 싱글스코어바");
 
             _rank1P.text = "-";
-            //이미지 설정
-            //_Image1P
+            _Image1P.GetComponent<Image>().sprite = playerImages[record.PlayerImage];
             _point1P.text = Convert.ToString(record.Score1P);
             _playTime1P.text = record.PlayTime1P;            
         }
@@ -105,8 +104,7 @@ public class ScoreBar : MonoBehaviour
             Debug.Log($"ScoreBar.cs - SetGameOverRecord() - 싱글스코어바");
 
             _rank1P.text = rank;
-            //이미지 설정
-            //_Image1P
+            _Image1P.GetComponent<Image>().sprite = playerImages[record.PlayerImage];
             _point1P.text = Convert.ToString(record.Score1P);
             _playTime1P.text = record.PlayTime1P;            
         }

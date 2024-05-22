@@ -17,7 +17,6 @@ public class BombUI : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     public void BombCheck(int bombCount)

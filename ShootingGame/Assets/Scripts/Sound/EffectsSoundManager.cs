@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EffectsSoundManager : MonoBehaviour
 {
-    public AudioClip attackClip;
+    public AudioClip[] attackClips;
     private AudioSource audioSource;
 
     public static EffectsSoundManager _instance;
@@ -17,17 +17,18 @@ public class EffectsSoundManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
-        
-
-        
-    }
-
     public void PlayAttackSound()
     {
         // AudioSource에 공격 효과음 클립 설정
-        audioSource.clip = attackClip;
+        audioSource.volume = 0.15f;
+        audioSource.clip = attackClips[0];
+        audioSource.Play();
+    }
+
+    public void PlayBombSound()
+    {
+        audioSource.volume = 0.7f;
+        audioSource.clip = attackClips[1];
         audioSource.Play();
     }
 }

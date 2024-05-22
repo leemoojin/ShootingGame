@@ -28,16 +28,7 @@ public class CheckGameover : MonoBehaviour
             if(player1Dead)
             {
                 Debug.Log("게임오버");
-
-                if (NewCharacterManager.Instance.spriteName == "PixelArtSpaceShipOne")
-                {
-                    GameOverRecord._instance.GetRecord(ScoreManager.Instance.totalScore, ScoreManager.Instance.playTime, 0);
-                }
-                else
-                {
-                    GameOverRecord._instance.GetRecord(ScoreManager.Instance.totalScore, ScoreManager.Instance.playTime, 1);
-                }
-
+               
                 SceneManager.LoadScene("GameoverScene");                
             }
         }

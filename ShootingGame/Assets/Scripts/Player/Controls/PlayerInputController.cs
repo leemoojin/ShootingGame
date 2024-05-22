@@ -41,6 +41,7 @@ public class PlayerInputController : MovementController
         
         if(isPressed)
         {
+            EffectsSoundManager._instance.PlayAttackSound();
             CallFireEvent();
         }
     }
@@ -55,6 +56,7 @@ public class PlayerInputController : MovementController
             if (isPressed_bomb)
             {
                 Debug.Log("폭탄 사용" + value.ToString());
+                EffectsSoundManager._instance.PlayBombSound();
                 CallBombEvent();
                 bombAmountController.UseBomb(bombUse);
                 isPressed_bomb = false;

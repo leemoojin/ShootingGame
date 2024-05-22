@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 190263929}
   - component: {fileID: 190263930}
-  - component: {fileID: 190263931}
   m_Layer: 0
   m_Name: CheckGameover
   m_TagString: Untagged
@@ -170,21 +169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPlayer1: {fileID: 4945043804787316018, guid: 4b9582e399de55f4bb9d94697c4ad34b, type: 3}
   healthPlayer2: {fileID: 8162225197567103963, guid: 61563b91a1a80cf45a24a1e3fa1e363f, type: 3}
---- !u!114 &190263931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190263928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f71c0efff698dc54abad7260860e58c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  singleScoreBar: {fileID: 0}
-  multiScoreBar: {fileID: 0}
-  newRecordTxt: {fileID: 0}
 --- !u!1 &239699506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1397,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1509,7 +1493,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbd3d983e02bf54ab04001167fa6fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackClip: {fileID: 8300000, guid: 3dc7b4438e9f788479f2eba0e75191b1, type: 3}
+  attackClips:
+  - {fileID: 8300000, guid: 3dc7b4438e9f788479f2eba0e75191b1, type: 3}
+  - {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
 --- !u!4 &1573595007
 Transform:
   m_ObjectHideFlags: 0

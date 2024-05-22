@@ -13,9 +13,7 @@ public class SaveLoadManager : MonoBehaviour
     private List<Record> multiRecords;
 
     public static SaveLoadManager Instance;
-
-    //private string _filePath1P = @"D:\test\singleRecords.dat";
-    //private string _filePath2P = @"D:\test\multiRecords.dat";
+ 
     private string folderName = "SaveLoadData";
     private string folderPath;
     private string _filePath1P;
@@ -52,8 +50,6 @@ public class SaveLoadManager : MonoBehaviour
         _filePath1P = Path.Combine(folderPath, "singleRecords.dat");
         _filePath1P = Path.Combine(folderPath, "multiRecords.dat");
 
-
-        //if (Records.instance.singleRecords.Count == 0) return;
         LoadData();
         SaveData();
 

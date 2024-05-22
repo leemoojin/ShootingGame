@@ -22,7 +22,7 @@ public class GameOverRecord : MonoBehaviour
 
     private Record tempRecord;
 
-    private string currentSceneName;
+    //private string currentSceneName;
 
 
     private void Awake()
@@ -37,13 +37,18 @@ public class GameOverRecord : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName != "GameoverScene") return;
+        //currentSceneName = SceneManager.GetActiveScene().name;
+        //if (currentSceneName != "GameoverScene") return;
 
-        //임시로 솔로 플레이로 설정
-        //_isMulti = false;
-        //_score1P = 500;
-        //_playTime1P = "00.20.35";
+
+        if (NewCharacterManager.Instance.spriteName == "PixelArtSpaceShipOne")
+        {
+            GetRecord(ScoreManager.Instance.totalScore, ScoreManager.Instance.playTime, 0);
+        }
+        else
+        {
+            GetRecord(ScoreManager.Instance.totalScore, ScoreManager.Instance.playTime, 1);
+        }
 
         //string time = ScoreManager.Instance.time.ToString("N2");
         //GetRecord(ScoreManager.Instance.score, time);
