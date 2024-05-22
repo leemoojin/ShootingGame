@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectCharacter : MonoBehaviour
+/*public class SelectCharacter : MonoBehaviour
 {
     public Character character;
     Animator anim;
@@ -47,3 +47,4 @@ public class SelectCharacter : MonoBehaviour
 
    
 }
+*/

@@ -4,16 +4,35 @@ using UnityEngine;
 
 public class ReSpawn : MonoBehaviour
 {
-    public GameObject[] charPrefabs;
-    public GameObject player;
+    public CharacterDatabase characterDB;
+    public SpriteRenderer artworkSprite;
 
+    private int selectedOption = 0;
 
     void Start()
     {
-        player = Instantiate(charPrefabs[(int)DataManager.instance.currentCharacter]);
-        player.transform.position = transform.position;
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            selectedOption = 0;
+        }
+        else
+        {
+            Load();
+        }
+        UpdateCharacter(selectedOption);
+
+    }
+    private void UpdateCharacter(int selectedOption)
+    {
+        NewCharacter newCharacter = characterDB.GetNewCharacter(selectedOption);
+        artworkSprite.sprite = newCharacter.characterSprite;
 
     }
 
-    
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+
+
 }
