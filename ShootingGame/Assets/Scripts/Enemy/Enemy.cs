@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
         
         if (hp <= 0)
         {
-            enemyAnim.DestroyAnimation();
+            //enemyAnim.DestroyAnimation();
             if(Random.Range(0,1f) <= 0.3f)
             {
                 SpawnRandomItem();
