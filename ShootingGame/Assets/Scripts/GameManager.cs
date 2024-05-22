@@ -9,20 +9,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Enemy smallPlane;
-    public Enemy middlePlane;
-    public Enemy largePlane;
-    public Enemy bombPlane;
-    public Enemy stone;
-    public Enemy meteor;
-
     [SerializeField] private GameObject playerprefab1;
     [SerializeField] private GameObject playerprefab2;
 
     [SerializeField] private GameObject[] EnhanceAttack;
     public Vector3[] spawnPositions;
 
-    public LevelDesign levelDesign;
+    private LevelDesign levelDesign;
 
     private void Awake()
     {
@@ -42,9 +35,7 @@ public class GameManager : MonoBehaviour
     {
         levelDesign = GetComponent<LevelDesign>();
 
-        levelDesign.smallPlane = smallPlane;
-
-        InvokeRepeating("MakePlane", 0f, 1f);   
+        InvokeRepeating("MakePlane", 0f, 2f);   
         if (PlayerPrefs.HasKey("SelectedSpaceShip")) // 만약 버튼이 클릭되었다면
         {
             // 플레이어 1 프리팹 생성
@@ -61,11 +52,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void MakePlane()
     {
