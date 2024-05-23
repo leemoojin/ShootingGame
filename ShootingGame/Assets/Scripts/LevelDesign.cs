@@ -21,25 +21,14 @@ public class LevelDesign : MonoBehaviour
     public void MakePlane()
     {
         Instantiate(smallPlane);
-        if (scoreManager != null && scoreManager.TimeElapsed > 10)
-        {
-            Instantiate(middlePlane);
-        }
-        if (scoreManager != null && scoreManager.TimeElapsed > 20)
-        {
-            Instantiate(bombPlane);
-        }
-        if (scoreManager != null && scoreManager.TimeElapsed > 30)
-        {
-            Instantiate(stone);
-        }
-        if (scoreManager != null && scoreManager.TimeElapsed > 40)
-        {
-            Instantiate(largePlane);
-        }
-        if (scoreManager != null && scoreManager.TimeElapsed > 50)
-        {
-            Instantiate(meteor);
-        }
+        if (scoreManager == null) return;
+
+        float timeElapsed = scoreManager.TimeElapsed;
+
+        if (timeElapsed > 10) Instantiate(middlePlane);
+        if (timeElapsed > 20) Instantiate(bombPlane);
+        if (timeElapsed > 30) Instantiate(stone);
+        if (timeElapsed > 40) Instantiate(largePlane);
+        if (timeElapsed > 50) Instantiate(meteor);
     }
 }
