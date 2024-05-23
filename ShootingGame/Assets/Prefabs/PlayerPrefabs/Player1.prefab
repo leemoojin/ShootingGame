@@ -54,7 +54,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint4(BR)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 1817334702362810428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.016, z: 0}
+  m_LocalPosition: {x: 1.62, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 5751478788420802363}
   - component: {fileID: 5385796910334856862}
   - component: {fileID: 9020473921145740679}
-  - component: {fileID: 7261638887306014348}
+  - component: {fileID: 7600099314911499935}
   - component: {fileID: 4945043804787316018}
   - component: {fileID: -3008964355609160831}
   - component: {fileID: 8816988608568402748}
@@ -293,7 +293,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &7261638887306014348
+--- !u!60 &7600099314911499935
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,12 +337,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.17937149, y: -0.031154253}
-      - {x: -0.001571469, y: 0.2852964}
-      - {x: -0.16778551, y: 0.006109342}
-      - {x: -0.2558204, y: -0.14772329}
-      - {x: 0.25071576, y: -0.1430772}
-      - {x: 0.19912651, y: -0.056835964}
+    - - {x: 0.57326204, y: 0.5374476}
+      - {x: -0.02270636, y: 2.3056152}
+      - {x: -0.6858672, y: 0.533231}
+      - {x: -1.8287314, y: -0.7636968}
+      - {x: -1.2704213, y: -1.506656}
+      - {x: 1.2854245, y: -1.4991543}
+      - {x: 1.8480026, y: -0.75658554}
   m_UseDelaunayMesh: 0
 --- !u!114 &4945043804787316018
 MonoBehaviour:
@@ -418,7 +419,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint4(FL)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -431,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 2515484854644647638}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.3, z: 0}
+  m_LocalPosition: {x: -0.5, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -516,8 +517,8 @@ Transform:
   m_GameObject: {fileID: 4288543515544623193}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4737374566679142572}
@@ -622,7 +623,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint3(L)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -635,7 +636,7 @@ Transform:
   m_GameObject: {fileID: 5117974049427637324}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.016, z: 0}
+  m_LocalPosition: {x: -1.62, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -706,7 +707,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint3(R)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -719,7 +720,7 @@ Transform:
   m_GameObject: {fileID: 5362908329444552808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.016, z: 0}
+  m_LocalPosition: {x: 1.62, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -790,7 +791,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint2(R)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -803,7 +804,7 @@ Transform:
   m_GameObject: {fileID: 6270933658910954915}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0.5, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -874,7 +875,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint4(FR)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -887,7 +888,7 @@ Transform:
   m_GameObject: {fileID: 6794498484373768037}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0.5, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -958,7 +959,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -971,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 6845820235445814822}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1148,7 +1149,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint3(M)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1161,7 +1162,7 @@ Transform:
   m_GameObject: {fileID: 7830464435478441030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1232,7 +1233,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint2(L)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1245,7 +1246,7 @@ Transform:
   m_GameObject: {fileID: 8150400642061884329}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.3, z: 0}
+  m_LocalPosition: {x: -0.5, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1316,7 +1317,7 @@ GameObject:
   m_Layer: 13
   m_Name: ShootPoint4(BL)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1329,7 +1330,7 @@ Transform:
   m_GameObject: {fileID: 8180199022239387377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.016, z: 0}
+  m_LocalPosition: {x: -1.62, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
