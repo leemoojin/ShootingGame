@@ -20,14 +20,14 @@ public class EffectsSoundManager : MonoBehaviour
     public void PlayAttackSound()
     {
         // AudioSource에 공격 효과음 클립 설정
-        audioSource.volume = 0.15f;
+        audioSource.volume = 0.1f;
         audioSource.clip = attackClips[0];
         audioSource.Play();
     }
 
     public void PlayBombSound()
     {
-        audioSource.volume = 0.7f;
+        audioSource.volume = 0.4f;
         audioSource.clip = attackClips[1];
         audioSource.Play();
     }

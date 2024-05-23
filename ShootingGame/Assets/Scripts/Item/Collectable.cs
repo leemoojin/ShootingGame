@@ -11,6 +11,14 @@ public class Collectable : MonoBehaviour
         collectableBehaviour = GetComponent<ICollectableBehaviour>();
     }
 
+    private void Update()
+    {
+        if (gameObject.transform.position.y < -6)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.GetComponent<PlayerMovement>();

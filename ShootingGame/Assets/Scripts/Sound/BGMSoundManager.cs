@@ -50,6 +50,7 @@ public class BGMSoundManager : MonoBehaviour
     public void PlayBGM(int index)
     {
         audioSource.clip = backgroundMusic[index];
+        if(index == 1) audioSource.volume = 0.09f;
         audioSource.Play();
     }
 
