@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text timeTxt;  // 대문자 변수는 소문자로 시작하는 것이 관례
+    public Text timeTxt;
     public Text scoreTxt;
 
     private int score;
