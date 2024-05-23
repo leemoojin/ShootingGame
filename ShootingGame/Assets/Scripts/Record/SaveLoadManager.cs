@@ -58,7 +58,7 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         _filePath1P = Path.Combine(folderPath, "singleRecords.dat");
-        _filePath1P = Path.Combine(folderPath, "multiRecords.dat");
+        _filePath2P = Path.Combine(folderPath, "multiRecords.dat");
 
         LoadData();
         SaveData();
