@@ -25,7 +25,8 @@ ShootingGame - 닷지를 베이스로 한 탄막 슈팅게임
 - [플레이어 및 아이템 생성](https://github.com/leemoojin/ShootingGame/wiki/%EC%A0%81-%EC%83%9D%EC%84%B1)
 - [적 생성](https://github.com/leemoojin/ShootingGame/wiki/%EC%A0%81-%EC%83%9D%EC%84%B1)
 - [시간/스코어 구현](https://github.com/leemoojin/ShootingGame/wiki/%EC%8B%9C%EA%B0%84-%EC%8A%A4%EC%BD%94%EC%96%B4-%EA%B5%AC%ED%98%84)
-- 사운드 생성
+- [사운드 생성](https://github.com/leemoojin/ShootingGame/wiki/%EC%82%AC%EC%9A%B4%EB%93%9C-%EC%83%9D%EC%84%B1)
+- [플레이 기록 관리](https://github.com/leemoojin/ShootingGame/wiki/%ED%94%8C%EB%A0%88%EC%9D%B4-%EA%B8%B0%EB%A1%9D-%EA%B4%80%EB%A6%AC)
 - 멀티 플레이
   
 ## 순서도
